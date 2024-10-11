@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Outlet } from "react-router-dom";
 
 //Assets
@@ -6,7 +6,7 @@ import { siteIcon } from "../../assets";
 
 //Components
 import { Footer } from "../";
-
+import { SideMenu, Hamburger } from "./components";
 //Styles
 import {
   Container,
@@ -16,9 +16,16 @@ import {
   Text,
   HeaderRight,
   MainContent,
-} from "./style";
+  Overlay,
+} from "./styles";
 
 const MobileLayout = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+  const closeMenu = () => setIsMenuOpen(false);
+
   return (
     <Container>
       <Header>
@@ -26,13 +33,18 @@ const MobileLayout = () => {
           <Icon src={siteIcon} alt="logo"></Icon>
           <Text>novaFPS</Text>
         </HeaderLeft>
-        <HeaderRight></HeaderRight>
+        <HeaderRight>
+          <Hamburger onClick={toggleMenu}>Menu</Hamburger>
+        </HeaderRight>
       </Header>
 
       <MainContent>
         <Outlet />
         <Footer />
       </MainContent>
+
+      <SideMenu $isOpen={isMenuOpen} />
+      <Overlay $isOpen={isMenuOpen} onClick={closeMenu} />
     </Container>
   );
 };
