@@ -34,7 +34,9 @@ const MobileLayout = () => {
           <Text>novaFPS</Text>
         </HeaderLeft>
         <HeaderRight>
-          <Hamburger onClick={toggleMenu}>Menu</Hamburger>
+          <Hamburger isOpen={isMenuOpen} onClick={toggleMenu}>
+            Menu
+          </Hamburger>
         </HeaderRight>
       </Header>
 
@@ -43,7 +45,7 @@ const MobileLayout = () => {
         <Footer />
       </MainContent>
 
-      <SideMenu $isOpen={isMenuOpen} />
+      <SideMenu $isOpen={isMenuOpen} onClick={closeMenu} />
       <Overlay $isOpen={isMenuOpen} onClick={closeMenu} />
     </Container>
   );

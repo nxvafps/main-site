@@ -1,9 +1,11 @@
 import React from "react";
 
+import { Title } from "../../../components";
+
 const Portfolio = () => {
   return (
     <div>
-      <h1>Portfolio</h1>
+      <Title text="Portfolio" />
     </div>
   );
 };

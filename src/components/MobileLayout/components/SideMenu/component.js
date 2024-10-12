@@ -2,12 +2,12 @@ import React from "react";
 import { NavButton } from "../../..";
 import { StyledSideMenu } from "./styles";
 
-const SideMenu = ({ $isOpen }) => {
+const SideMenu = ({ $isOpen, onClick }) => {
   return (
     <StyledSideMenu $isOpen={$isOpen}>
-      <NavButton to="/" text="Home" />
-      <NavButton to="/portfolio" text="Portfolio" />
-      <NavButton to="/contact" text="Contact" />
+      <NavButton href="/" text="Home" onClick={onClick} />
+      <NavButton href="/portfolio" text="Portfolio" onClick={onClick} />
+      <NavButton href="/contact" text="Contact" onClick={onClick} />
     </StyledSideMenu>
   );
 };
