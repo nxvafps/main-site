@@ -93,7 +93,7 @@ export const Technologies = styled.div`
 
 export const Icon = styled.img`
   height: 18%;
-  max-height: 150px;
+  max-height: 100px;
   width: 18%;
-  max-width: 150px;
+  max-width: 100px;
 `;
