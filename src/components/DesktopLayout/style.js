@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Header = styled.div`
   height: 80px;
-  background-color: #434343;
+  background-color: #121212;
   display: flex;
   flex-direction: row;
   align-items: center;

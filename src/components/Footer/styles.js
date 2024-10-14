@@ -15,6 +15,6 @@ export const Image = styled.img`
 
 export const LinkStyled = styled.a`
   &:hover {
-    background-color: #7b7777;
+    background-color: #121212;
   }
 `;

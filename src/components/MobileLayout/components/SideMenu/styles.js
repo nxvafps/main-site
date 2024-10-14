@@ -8,7 +8,7 @@ export const StyledSideMenu = styled.div`
   right: 0;
   height: calc(100% - 80px);
   width: 200px;
-  background-color: #434343;
+  background-color: #121212;
   transform: ${({ $isOpen }) =>
     $isOpen ? "translateX(0)" : "translateX(100%)"};
   transition: transform 0.5s ease-in-out;

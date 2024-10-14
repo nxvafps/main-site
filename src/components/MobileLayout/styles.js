@@ -6,8 +6,9 @@ export const Container = styled.div`
 `;
 
 export const Header = styled.div`
+  z-index: 1000;
   height: 80px;
-  background-color: #434343;
+  background-color: #121212;
   display: flex;
   flex-direction: row;
   align-items: center;

@@ -27,15 +27,15 @@ export const GlobalStyle = createGlobalStyle`
     }
     
     ::-webkit-scrollbar-thumb { 
-        background: #7b7777;
+        background: #121212;
     }
     
     ::-webkit-scrollbar-thumb:hover {
-        background: #7b7777;
+        background: #121212;
     }
   }
 
   body {
-    background-color: #7b7777;
+    background-color: #121212;
   }
 `;

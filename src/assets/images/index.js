@@ -1,3 +1,5 @@
 import banner from "./banner.png";
+import me from "./me.png";
 
-export { banner };
+export * from "./Technologies";
+export { banner, me };

@@ -1,34 +1,75 @@
 import React from "react";
 
 //Assets
-import { banner } from "../../../assets";
+import {
+  me,
+  bootstrap,
+  css,
+  express,
+  git,
+  github,
+  html,
+  node,
+  react,
+  sass,
+  tailwind,
+} from "../../../assets";
 
 //Components
-import { Title, Subtitle } from "../../../components";
+import { Title, Typewriter } from "../../../components";
 
 //Hooks
 
 //Styles
-import { Banner, Intro, SkillShowcase } from "./styles";
+import {
+  Intro,
+  IntroLeft,
+  IntroText1,
+  Placeholder,
+  IntroText2,
+  IntroRight,
+  Image,
+  SkillShowcase,
+  Technologies,
+  Icon,
+} from "./styles";
 
 const Home = () => {
   return (
     <>
-      <Banner src={banner} alt="nova banner" />
-      <Title text="Welcome" />
       <Intro>
-        Here you'll find my web development portfolio showcasing the projects I
-        have completed, along with the ones I'm currently working on! But that's
-        not all! I am also using this space to celebrate my love of gaming.
-        Explore my content from youtube, twitter, and tiktok and join me on my
-        adventures! Stay a while, explore, and let’s create something amazing
-        together!
+        <IntroLeft>
+          <IntroText1>Hi, I'm Ollie</IntroText1>
+          <Placeholder>
+            <Typewriter />
+          </Placeholder>
+          <IntroText2>
+            Here you'll find my web development portfolio showcasing the
+            projects I have completed, along with the ones I'm currently working
+            on! But that's not all! I am also using this space to celebrate my
+            love of gaming. Explore my content from youtube, twitter, and tiktok
+            and join me on my adventures! Stay a while, explore, and let’s
+            create something amazing together!
+          </IntroText2>
+        </IntroLeft>
+        <IntroRight>
+          <Image src={me}></Image>
+        </IntroRight>
       </Intro>
       <SkillShowcase>
-        <Subtitle textAlign="left" text="Current Projects" underline />
-        <p> projects go here </p>
-        <Subtitle textAlign="left" text="Latest Upload" underline />
-        <p> youtube embed goes here </p>
+        <Title text="Technologies" underline />
+        <Technologies>
+          <Icon src={html} alt="HTML" />
+          <Icon src={css} alt="CSS" />
+          <Icon src={sass} alt="SASS" />
+          <Icon src={bootstrap} alt="Bootstrap" />
+          <Icon src={tailwind} alt="Tailwind" />
+          <Icon src={node} alt="Nodejs" />
+          <Icon src={react} alt="React" />
+          <Icon src={express} alt="Express" />
+          <Icon src={git} alt="Git" />
+          <Icon src={github} alt="Github" />
+        </Technologies>
       </SkillShowcase>
     </>
   );
