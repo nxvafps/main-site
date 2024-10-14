@@ -13,6 +13,7 @@ import {
   react,
   sass,
   tailwind,
+  javascript,
 } from "../../../assets";
 
 //Components
@@ -64,6 +65,7 @@ const Home = () => {
           <Icon src={sass} alt="SASS" />
           <Icon src={bootstrap} alt="Bootstrap" />
           <Icon src={tailwind} alt="Tailwind" />
+          <Icon src={javascript} alt="Javascript" />
           <Icon src={node} alt="Nodejs" />
           <Icon src={react} alt="React" />
           <Icon src={express} alt="Express" />

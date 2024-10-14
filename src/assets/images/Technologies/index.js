@@ -8,6 +8,7 @@ import sass from "./sass.svg";
 import tailwind from "./tailwindcss-icon.svg";
 import git from "./git-icon.svg";
 import github from "./github-icon.svg";
+import javascript from "./javascript.svg";
 
 export {
   bootstrap,
@@ -20,4 +21,5 @@ export {
   tailwind,
   git,
   github,
+  javascript,
 };
