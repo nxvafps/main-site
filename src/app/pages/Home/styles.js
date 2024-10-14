@@ -83,7 +83,7 @@ export const SkillShowcase = styled.div`
 
 export const Technologies = styled.div`
   margin: 20px auto;
-  max-width: 830px;
+  max-width: 580px;
   display: flex;
   justify-content: center;
   align-items: center;
