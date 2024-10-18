@@ -15,6 +15,7 @@ const AppRouter = () => {
         element={layout === "desktop" ? <DesktopLayout /> : <MobileLayout />}
       >
         <Route index element={<Pages.Home />} />
+        <Route path="about" element={<Pages.About />} />
         <Route path="portfolio" element={<Pages.Portfolio />} />
         <Route path="contact" element={<Pages.Contact />} />
       </Route>

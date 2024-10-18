@@ -7,7 +7,6 @@ import {
   css,
   express,
   git,
-  github,
   html,
   node,
   react,
@@ -70,7 +69,6 @@ const Home = () => {
           <Icon src={react} alt="React" />
           <Icon src={express} alt="Express" />
           <Icon src={git} alt="Git" />
-          <Icon src={github} alt="Github" />
         </Technologies>
       </SkillShowcase>
     </>

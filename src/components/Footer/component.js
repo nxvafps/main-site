@@ -3,7 +3,7 @@ import React from "react";
 //Assets
 import {
   discord,
-  githubIcon,
+  github,
   linkedin,
   steam,
   tiktok,
@@ -32,7 +32,7 @@ const Footer = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <Image alt="Github Icon" src={githubIcon} />
+          <Image alt="Github Icon" src={github} />
         </LinkStyled>
 
         <LinkStyled

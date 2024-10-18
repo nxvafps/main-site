@@ -31,6 +31,9 @@ const DesktopLayout = () => {
               <NavButton text="Home" href="/" />
             </ButtonContainer>
             <ButtonContainer>
+              <NavButton text="About" href="/about" />
+            </ButtonContainer>
+            <ButtonContainer>
               <NavButton text="Portfolio" href="/portfolio" />
             </ButtonContainer>
             <ButtonContainer>
