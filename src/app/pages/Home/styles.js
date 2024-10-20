@@ -172,7 +172,7 @@ export const IconContainer = styled.div`
 
   @media (max-width: 768px) {
     padding: 30px 0;
-    width: ${({ $isSelected }) => ($isSelected ? "90vw" : "80vw")};
+    width: 80vw;
     flex-direction: row;
     overflow-x: ${({ $isSelected }) => ($isSelected ? "auto" : "")};
     scroll-snap-type: ${({ $isSelected }) =>
@@ -185,7 +185,8 @@ export const IconContainer = styled.div`
 
 export const Icon = styled.img`
   ${variables}
-  --selected-icon-size: calc((40vw - (2 * var(--icon-gap) + 10px))/3);
+  --desktop-selected-icon-size: calc((40vw - (2 * var(--icon-gap) + 10px))/3);
+  --mobile-icon-size: calc((80vw - (2 * var(--icon-gap))) / 3);
   height: var(--icon-size);
   max-height: 100px;
   width: var(--icon-size);
@@ -200,8 +201,15 @@ export const Icon = styled.img`
   }
 
   @media (min-width: 768px) {
+    //desktop display
     height: ${({ $isSelected }) =>
-      $isSelected ? "var(--selected-icon-size)" : "var(--icon-size)"};
+      $isSelected ? "var(--desktop-selected-icon-size)" : "var(--icon-size)"};
+  }
+
+  @media (max-width: 768px) {
+    //mobile display
+    height: ${({ $isSelected }) =>
+      $isSelected ? "var(--mobile-icon-size)" : "var(--mobile-icon-size)"};
   }
 `;
 
