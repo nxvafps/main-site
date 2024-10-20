@@ -174,6 +174,7 @@ export const IconContainer = styled.div`
 
   @media (max-width: 768px) {
     padding: 30px 0;
+    width: 80vw;
     justify-content: center;
   }
 `;
