@@ -5,3 +5,4 @@ export * from "./Title";
 export * from "./NavButton";
 export * from "./Footer";
 export * from "./Typewriter";
+export * from "./CloseIcon";
