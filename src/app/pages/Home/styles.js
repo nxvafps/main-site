@@ -147,6 +147,8 @@ export const Technologies = styled.div`
   }
 
   @media (max-width: 768px) {
+    align-items: center;
+    justify-content: center;
     gap: ${({ $isSelected }) => ($isSelected ? "10px" : "0px")};
     flex-direction: ${({ $isSelected }) => ($isSelected ? "column" : "row")};
   }
@@ -172,8 +174,6 @@ export const IconContainer = styled.div`
 
   @media (max-width: 768px) {
     padding: 30px 0;
-    width: 80vw;
-    flex-direction: row;
     justify-content: center;
   }
 `;
