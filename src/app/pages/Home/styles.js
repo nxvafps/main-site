@@ -155,8 +155,6 @@ export const Technologies = styled.div`
 export const IconContainer = styled.div`
   ${variables}
   display: flex;
-  justify-content: ${({ $isSelected }) =>
-    $isSelected ? "flex-start" : "center"};
   align-items: center;
   flex-flow: row wrap;
   gap: var(--icon-gap);
@@ -166,6 +164,8 @@ export const IconContainer = styled.div`
     width: ${({ $isSelected }) => ($isSelected ? "40vw" : "80vw")};
     transition: width 0.2s ease-in-out;
     display: ${({ $isSelected }) => ($isSelected ? "grid" : "flex")};
+    justify-content: ${({ $isSelected }) =>
+      $isSelected ? "flex-start" : "center"};
     grid-template-columns: ${({ $isSelected }) =>
       $isSelected ? "repeat(3, 1fr)" : ""};
   }
@@ -174,11 +174,6 @@ export const IconContainer = styled.div`
     padding: 30px 0;
     width: 80vw;
     flex-direction: row;
-    overflow-x: ${({ $isSelected }) => ($isSelected ? "auto" : "")};
-    scroll-snap-type: ${({ $isSelected }) =>
-      $isSelected ? "x mandatory" : ""};
-    -webkit-overflow-scrolling: ${({ $isSelected }) =>
-      $isSelected ? "touch" : ""};
     justify-content: center;
   }
 `;
@@ -192,7 +187,6 @@ export const Icon = styled.img`
   width: var(--icon-size);
   max-width: 100px;
   border-radius: 50%;
-  margin: ${({ $isSelected }) => ($isSelected ? "0" : "10px")};
   transition: height 0.5s ease-in-out, width 0.5s ease-in-out;
 
   &:hover {
