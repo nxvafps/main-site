@@ -1,2 +1,2 @@
 To Do:
-Add about me page
+Populate about me page
