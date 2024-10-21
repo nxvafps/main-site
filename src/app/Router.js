@@ -1,12 +1,12 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { useLayout } from "../stores";
+import { useSelector } from "react-redux";
 
 import * as Pages from "./pages";
 import { DesktopLayout, MobileLayout } from "../components";
 
 const AppRouter = () => {
-  const layout = useLayout();
+  const layout = useSelector((state) => state.layout);
 
   return (
     <Routes>

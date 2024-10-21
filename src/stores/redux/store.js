@@ -1,9 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { selectedIconReducer } from "./slices";
+import { selectedIconReducer, layoutReducer } from "./slices";
 
 const store = configureStore({
   reducer: {
     selectedIcon: selectedIconReducer,
+    layout: layoutReducer,
   },
 });
 

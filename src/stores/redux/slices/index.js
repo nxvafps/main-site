@@ -3,4 +3,12 @@ import selectedIconReducer, {
   clearSelectedIcon,
 } from "./selectedIcon";
 
-export { selectedIconReducer, setSelectedIcon, clearSelectedIcon };
+import layoutReducer, { setLayout } from "./layout";
+
+export {
+  selectedIconReducer,
+  setSelectedIcon,
+  clearSelectedIcon,
+  layoutReducer,
+  setLayout,
+};

@@ -211,10 +211,12 @@ export const IconContainer = styled.div`
     ${({ $isSelected }) =>
       $isSelected
         ? `
+        width:100vw;
         display: block;
-        padding: 15px 0;
-        overflow: auto;
+        padding: 10px;
+        overflow-x: scroll;
         white-space: nowrap;
+        scroll-behaviour: smooth;
       `
         : `
         display: grid;
