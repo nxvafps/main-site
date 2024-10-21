@@ -1,25 +1,31 @@
 import styled from "styled-components";
 
 const variables = `
-  --icon-gap: calc((80vw / 5) / 6);
-  --icon-size: calc(80vw - var(--icon-gap) * 4) / 5;
-  --screen-width: 768px;
+  --desktop-gap: 2.5vw;
+  --desktop-size: calc((80vw - (var(--desktop-gap) * 3)) / 4);
+  --selected-desktop-size: calc((40vw - (var(--desktop-gap) * 2)) / 3);
+  --mobile-gap: 2vw;
+  --mobile-size: calc((80vw - (var(--mobile-gap) * 2)) / 3);
+  --selected-mobile-size: calc((80vw - (var(--mobile-gap) * 2)) / 3);
 `;
+//desktop icon size - 2.5vw gap between icons
 
 export const Intro = styled.div`
   ${variables}
 
   display: grid;
-  width: 90vw;
+  width: 80vw;
   gap: 10px;
 
   @media (min-width: 768px) {
+    //desktop display
     grid-template-columns: 1fr 1fr;
     justify-items: start;
     margin: 20px auto;
   }
 
   @media (max-width: 768px) {
+    //mobile display
     grid-template-columns: 1fr;
     justify-items: center;
     margin: 5px auto 10px;
@@ -34,12 +40,14 @@ export const IntroLeft = styled.div`
   gap: 10px;
 
   @media (min-width: 768px) {
-    width: 45vw;
+    //desktop display
+    width: 40vw;
     justify-items: start;
   }
 
   @media (max-width: 768px) {
-    width: 90vw;
+    //mobile display
+    width: 80vw;
     margin: 5%;
     justify-items: center;
   }
@@ -51,14 +59,16 @@ export const IntroText1 = styled.p`
   color: #ffffff;
 
   @media (min-width: 768px) {
+    //desktop display
     text-align: left;
-    max-width: 45vw;
+    max-width: 40vw;
   }
 
   @media (max-width: 768px) {
+    //mobile display
     text-align: center;
     justify-self: center;
-    width: 90vw;
+    width: 80vw;
   }
 `;
 
@@ -66,14 +76,16 @@ export const Placeholder = styled.div`
   ${variables}
 
   @media (min-width: 768px) {
+    //desktop display
     justify-content: flex-start;
-    max-width: 45vw;
+    max-width: 40vw;
   }
 
   @media (max-width: 768px) {
+    //mobile display
     display: flex;
     justify-content: center;
-    width: 90vw;
+    width: 80vw;
   }
 `;
 
@@ -84,11 +96,13 @@ export const IntroText2 = styled.p`
   font-size: clamp(1rem, 2vw, 2rem);
 
   @media (min-width: 768px) {
+    //desktop display
     text-align: left;
-    max-width: 45vw;
+    max-width: 40vw;
   }
 
   @media (max-width: 768px) {
+    //mobile display
     text-align: center;
   }
 `;
@@ -100,11 +114,13 @@ export const IntroRight = styled.div`
   height: 100%;
 
   @media (min-width: 768px) {
-    width: 45vw;
+    //desktop display
+    width: 40vw;
   }
 
   @media (max-width: 768px) {
-    width: 90vw;
+    //mobile display
+    width: 80vw;
   }
 `;
 
@@ -122,10 +138,12 @@ export const Image = styled.img`
   }
 
   @media (min-width: 768px) {
-    width: 60%;
+    //desktop display
+    width: 70%;
   }
 
   @media (max-width: 768px) {
+    //mobile display
     width: 50%;
   }
 `;
@@ -133,7 +151,7 @@ export const Image = styled.img`
 export const SkillShowcase = styled.div`
   display: flex;
   flex-direction: column;
-  width: 90vw;
+  width: 80vw;
   margin: 20px auto;
 `;
 
@@ -142,13 +160,16 @@ export const Technologies = styled.div`
   margin: 20px auto;
 
   @media (min-width: 768px) {
+    //desktop display
     gap: ${({ $isSelected }) => ($isSelected ? "20px" : "0px")};
     flex-direction: row;
   }
 
   @media (max-width: 768px) {
+    //mobile display
     align-items: center;
     justify-content: center;
+    width: 80vw;
     gap: ${({ $isSelected }) => ($isSelected ? "10px" : "0px")};
     flex-direction: ${({ $isSelected }) => ($isSelected ? "column" : "row")};
   }
@@ -156,36 +177,39 @@ export const Technologies = styled.div`
 
 export const IconContainer = styled.div`
   ${variables}
-  display: flex;
+  display: grid;
   align-items: center;
-  flex-flow: row wrap;
-  gap: var(--icon-gap);
-  transition: width 0.2s ease-in-out, display 0.5s ease-in-out;
+  transition: width 0.5s ease-in-out, grid-template-columns 0.5s ease-in-out;
+  justify-items: center;
 
   @media (min-width: 768px) {
-    width: ${({ $isSelected }) => ($isSelected ? "40vw" : "80vw")};
-    transition: width 0.2s ease-in-out;
-    display: ${({ $isSelected }) => ($isSelected ? "grid" : "flex")};
-    justify-content: ${({ $isSelected }) =>
-      $isSelected ? "flex-start" : "center"};
+    //desktop display
     grid-template-columns: ${({ $isSelected }) =>
-      $isSelected ? "repeat(3, 1fr)" : ""};
+      $isSelected ? "repeat(3, 1fr)" : "repeat(4, 1fr)"};
+    gap: var(--desktop-gap);
+    width: ${({ $isSelected }) => ($isSelected ? "40vw" : "80vw")};
   }
 
   @media (max-width: 768px) {
-    padding: 30px 0;
+    //mobile display
+    grid-template-columns: ${({ $isSelected }) =>
+      $isSelected ? "" : "repeat(3, 1fr)"};
+    gap: var(--mobile-gap);
     width: 80vw;
-    justify-content: center;
+    display: ${({ $isSelected }) => ($isSelected ? "block" : "grid")};
+    ${({ $isSelected }) =>
+      $isSelected &&
+      `
+      padding: 15px 0;
+      overflow: auto;
+      white-space: nowrap;
+    `}
   }
 `;
 
 export const Icon = styled.img`
   ${variables}
-  --desktop-selected-icon-size: calc((40vw - (2 * var(--icon-gap) + 10px))/3);
-  --mobile-icon-size: calc((80vw - (2 * var(--icon-gap))) / 3);
-  height: var(--icon-size);
   max-height: 100px;
-  width: var(--icon-size);
   max-width: 100px;
   border-radius: 50%;
   transition: height 0.5s ease-in-out, width 0.5s ease-in-out;
@@ -198,19 +222,19 @@ export const Icon = styled.img`
   @media (min-width: 768px) {
     //desktop display
     height: ${({ $isSelected }) =>
-      $isSelected ? "var(--desktop-selected-icon-size)" : "var(--icon-size)"};
+      $isSelected ? "var(--selected-desktop-size)" : "var(--desktop-size)"};
   }
 
   @media (max-width: 768px) {
     //mobile display
+    margin: ${({ $isSelected }) => ($isSelected ? "10px" : "0")};
     height: ${({ $isSelected }) =>
-      $isSelected ? "var(--mobile-icon-size)" : "var(--mobile-icon-size)"};
+      $isSelected ? "var(--selected-mobile-size)" : "var(--mobile-size)"};
   }
 `;
 
 export const DetailsBox = styled.div`
   position: relative;
-  width: 40vw;
   padding: 20px;
   background-color: #333333;
   color: #ffffff;
@@ -218,11 +242,13 @@ export const DetailsBox = styled.div`
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
   @media (min-width: 768px) {
+    //desktop display
     width: 40vw;
   }
 
   @media (max-width: 768px) {
-    width: 90vw;
+    //mobile display
+    width: 80vw;
     margin: auto;
   }
 `;
