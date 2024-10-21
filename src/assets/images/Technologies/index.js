@@ -8,6 +8,9 @@ import sass from "./sass.svg";
 import tailwind from "./tailwindcss-icon.svg";
 import git from "./git-icon.svg";
 import javascript from "./javascript.svg";
+import postgresql from "./postgresql.svg";
+import redux from "./redux.svg";
+import copilot from "./copilot.svg";
 
 export {
   bootstrap,
@@ -20,4 +23,7 @@ export {
   tailwind,
   git,
   javascript,
+  postgresql,
+  redux,
+  copilot,
 };

@@ -16,6 +16,9 @@ import {
   sass,
   tailwind,
   javascript,
+  postgresql,
+  redux,
+  copilot,
 } from "../../../assets";
 
 //Components
@@ -51,20 +54,73 @@ const Home = () => {
 
   const handleCloseClick = () => dispatch(clearSelectedIcon());
 
-  const descriptions = {
-    HTML: "Here I talk about what I know about HTML.",
-    CSS: "Here I talk about what I know about CSS.",
-    SASS: "Here I talk about what I know about SASS.",
-    Bootstrap: "Here I talk about what I know about Bootstrap.",
-    Tailwind: "Here I talk about what I know about Tailwind.",
-    Javascript: "Here I talk about what I know about Javascript.",
-    "Node.js": "Here I talk about what I know about Node.js.",
-    "React.js": "Here I talk about what I know about React.js.",
-    "Express.js": "Here I talk about what I know about Express.js.",
-    Git: "Here I talk about what I know about Git.",
-  };
-
-  const description = descriptions[selectedIcon] || "You broke it!";
+  const techIcons = [
+    {
+      name: "HTML",
+      src: html,
+      description: "Here I talk about what I know about HTML.",
+    },
+    {
+      name: "CSS",
+      src: css,
+      description: "Here I talk about what I know about CSS.",
+    },
+    {
+      name: "SASS",
+      src: sass,
+      description: "Here I talk about what I know about SASS.",
+    },
+    {
+      name: "Bootstrap",
+      src: bootstrap,
+      description: "Here I talk about what I know about Bootstrap.",
+    },
+    {
+      name: "Tailwind",
+      src: tailwind,
+      description: "Here I talk about what I know about Tailwind.",
+    },
+    {
+      name: "Javascript",
+      src: javascript,
+      description: "Here I talk about what I know about Javascript.",
+    },
+    {
+      name: "Node.js",
+      src: node,
+      description: "Here I talk about what I know about Node.js.",
+    },
+    {
+      name: "React.js",
+      src: react,
+      description: "Here I talk about what I know about React.js.",
+    },
+    {
+      name: "Redux",
+      src: redux,
+      description: "Here I talk about what I know about Redux.",
+    },
+    {
+      name: "Express.js",
+      src: express,
+      description: "Here I talk about what I know about Express.js.",
+    },
+    {
+      name: "PostgreSQL",
+      src: postgresql,
+      description: "Here I talk about what I know about PostgreSQL.",
+    },
+    {
+      name: "Git",
+      src: git,
+      description: "Here I talk about what I know about Git.",
+    },
+    {
+      name: "Copilot",
+      src: copilot,
+      description: "Here I talk about what I know about Copilot.",
+    },
+  ];
 
   return (
     <>
@@ -91,74 +147,25 @@ const Home = () => {
         <Title text="Technologies" underline />
         <Technologies $isSelected={!!selectedIcon}>
           <IconContainer $isSelected={!!selectedIcon}>
-            <Icon
-              src={html}
-              alt="HTML"
-              onClick={() => handleIconClick("HTML")}
-              $isSelected={!!selectedIcon}
-            />
-            <Icon
-              src={css}
-              alt="CSS"
-              onClick={() => handleIconClick("CSS")}
-              $isSelected={!!selectedIcon}
-            />
-            <Icon
-              src={sass}
-              alt="SASS"
-              onClick={() => handleIconClick("SASS")}
-              $isSelected={!!selectedIcon}
-            />
-            <Icon
-              src={bootstrap}
-              alt="Bootstrap"
-              onClick={() => handleIconClick("Bootstrap")}
-              $isSelected={!!selectedIcon}
-            />
-            <Icon
-              src={tailwind}
-              alt="Tailwind"
-              onClick={() => handleIconClick("Tailwind")}
-              $isSelected={!!selectedIcon}
-            />
-            <Icon
-              src={javascript}
-              alt="Javascript"
-              onClick={() => handleIconClick("Javascript")}
-              $isSelected={!!selectedIcon}
-            />
-            <Icon
-              src={node}
-              alt="Nodejs"
-              onClick={() => handleIconClick("Node.js")}
-              $isSelected={!!selectedIcon}
-            />
-            <Icon
-              src={react}
-              alt="Reactjs"
-              onClick={() => handleIconClick("React.js")}
-              $isSelected={!!selectedIcon}
-            />
-            <Icon
-              src={express}
-              alt="Expressjs"
-              onClick={() => handleIconClick("Express.js")}
-              $isSelected={!!selectedIcon}
-            />
-            <Icon
-              src={git}
-              alt="Git"
-              onClick={() => handleIconClick("Git")}
-              $isSelected={!!selectedIcon}
-            />
+            {techIcons.map((icon, index) => (
+              <Icon
+                key={index}
+                src={icon.src}
+                alt={icon.name}
+                onClick={() => handleIconClick(icon)}
+                $isSelected={!!selectedIcon}
+              />
+            ))}
           </IconContainer>
           {selectedIcon && (
             <DetailsBox>
               <CloseButton onClick={handleCloseClick}>
                 <CloseIcon />
               </CloseButton>
-              <DetailsTitle>{selectedIcon}</DetailsTitle>
-              <DetailsDescription>{description}</DetailsDescription>
+              <DetailsTitle>{selectedIcon.name}</DetailsTitle>
+              <DetailsDescription>
+                {selectedIcon.description}
+              </DetailsDescription>
             </DetailsBox>
           )}
         </Technologies>

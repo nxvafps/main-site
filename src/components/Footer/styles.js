@@ -33,6 +33,8 @@ export const FooterContainer = styled.footer`
 export const Image = styled.img`
   width: var(--image-size);
   height: var(--image-size);
+  max-width: 150px;
+  max-height: 150px;
   border-radius: 50%;
   &:hover {
     border: 1px solid #ff4c29; /* Futuristic border color */
@@ -45,6 +47,8 @@ export const LinkStyled = styled.a`
   justify-content: center;
   width: var(--image-size);
   height: var(--image-size);
+  max-width: 150px;
+  max-height: 150px;
   &:hover {
     background-color: none;
   }
