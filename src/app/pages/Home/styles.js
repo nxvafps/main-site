@@ -11,8 +11,6 @@ const variables = `
 //desktop icon size - 2.5vw gap between icons
 
 export const Intro = styled.div`
-  ${variables}
-
   display: grid;
   width: 80vw;
   gap: 10px;
@@ -33,8 +31,6 @@ export const Intro = styled.div`
 `;
 
 export const IntroLeft = styled.div`
-  ${variables}
-
   display: grid;
   grid-template-rows: auto auto auto;
   gap: 10px;
@@ -54,7 +50,6 @@ export const IntroLeft = styled.div`
 `;
 
 export const IntroText1 = styled.p`
-  ${variables}
   font-size: clamp(2rem, 4vw, 3rem);
   color: #ffffff;
 
@@ -73,8 +68,6 @@ export const IntroText1 = styled.p`
 `;
 
 export const Placeholder = styled.div`
-  ${variables}
-
   @media (min-width: 768px) {
     //desktop display
     justify-content: flex-start;
@@ -90,7 +83,6 @@ export const Placeholder = styled.div`
 `;
 
 export const IntroText2 = styled.p`
-  ${variables}
   color: #ffffff;
   margin: 15px auto;
   font-size: clamp(1rem, 2vw, 2rem);
@@ -161,8 +153,13 @@ export const Technologies = styled.div`
 
   @media (min-width: 768px) {
     //desktop display
-    gap: ${({ $isSelected }) => ($isSelected ? "20px" : "0px")};
     flex-direction: row;
+
+    ${({ $isSelected }) =>
+      $isSelected &&
+      `
+        gap: 20px;
+      `}
   }
 
   @media (max-width: 768px) {
@@ -170,8 +167,16 @@ export const Technologies = styled.div`
     align-items: center;
     justify-content: center;
     width: 80vw;
-    gap: ${({ $isSelected }) => ($isSelected ? "10px" : "0px")};
-    flex-direction: ${({ $isSelected }) => ($isSelected ? "column" : "row")};
+
+    ${({ $isSelected }) =>
+      $isSelected
+        ? `
+        gap: 10px;
+        flex-direction: column;
+      `
+        : `
+        flex-direction: row;
+      `}
   }
 `;
 
@@ -184,26 +189,37 @@ export const IconContainer = styled.div`
 
   @media (min-width: 768px) {
     //desktop display
-    grid-template-columns: ${({ $isSelected }) =>
-      $isSelected ? "repeat(3, 1fr)" : "repeat(4, 1fr)"};
     gap: var(--desktop-gap);
-    width: ${({ $isSelected }) => ($isSelected ? "40vw" : "80vw")};
+
+    ${({ $isSelected }) =>
+      $isSelected
+        ? `
+        width: 40vw;
+        grid-template-columns: repeat(3, 1fr); 
+      `
+        : `
+        width: 80vw;
+        grid-template-columns: repeat(4, 1fr);
+      `}
   }
 
   @media (max-width: 768px) {
     //mobile display
-    grid-template-columns: ${({ $isSelected }) =>
-      $isSelected ? "" : "repeat(3, 1fr)"};
     gap: var(--mobile-gap);
     width: 80vw;
-    display: ${({ $isSelected }) => ($isSelected ? "block" : "grid")};
+
     ${({ $isSelected }) =>
-      $isSelected &&
+      $isSelected
+        ? `
+        display: block;
+        padding: 15px 0;
+        overflow: auto;
+        white-space: nowrap;
       `
-      padding: 15px 0;
-      overflow: auto;
-      white-space: nowrap;
-    `}
+        : `
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      `}
   }
 `;
 
@@ -221,15 +237,28 @@ export const Icon = styled.img`
 
   @media (min-width: 768px) {
     //desktop display
-    height: ${({ $isSelected }) =>
-      $isSelected ? "var(--selected-desktop-size)" : "var(--desktop-size)"};
+    ${({ $isSelected }) =>
+      $isSelected
+        ? `
+        height: var(--selected-desktop-size);
+      `
+        : `
+        height: var(--desktop-size);
+      `}
   }
 
   @media (max-width: 768px) {
     //mobile display
-    margin: ${({ $isSelected }) => ($isSelected ? "10px" : "0")};
-    height: ${({ $isSelected }) =>
-      $isSelected ? "var(--selected-mobile-size)" : "var(--mobile-size)"};
+    ${({ $isSelected }) =>
+      $isSelected
+        ? `
+        margin: 10px;
+        height: var(--selected-mobile-size);
+      `
+        : `
+        margin: 0;
+        height: var(--mobile-size);
+      `}
   }
 `;
 
