@@ -121,7 +121,7 @@ export const Image = styled.img`
   object-fit: cover;
   border-radius: 50%;
   box-sizing: border-box;
-  transition: border 0.3s, box-shadow 0.3s;
+  transition: border 0.2s, box-shadow 0.2s;
   border: 5px solid transparent;
 
   &:hover {
@@ -184,7 +184,7 @@ export const IconContainer = styled.div`
   ${variables}
   display: grid;
   align-items: center;
-  transition: width 0.5s ease-in-out, grid-template-columns 0.5s ease-in-out;
+  transition: width 0.2s ease-in-out, grid-template-columns 0.2s ease-in-out;
   justify-items: center;
 
   @media (min-width: 768px) {
@@ -227,10 +227,8 @@ export const IconContainer = styled.div`
 
 export const Icon = styled.img`
   ${variables}
-  max-height: 100px;
-  max-width: 100px;
   border-radius: 50%;
-  transition: height 0.5s ease-in-out, width 0.5s ease-in-out;
+  transition: height 0.2s ease-in-out, width 0.2s ease-in-out;
 
   &:hover {
     border: 1px solid #ff4c29;
@@ -243,9 +241,11 @@ export const Icon = styled.img`
       $isSelected
         ? `
         height: var(--selected-desktop-size);
+        max-height: 150px;
       `
         : `
         height: var(--desktop-size);
+        max-height: 200px;
       `}
   }
 
@@ -256,10 +256,12 @@ export const Icon = styled.img`
         ? `
         margin: 10px;
         height: var(--selected-mobile-size);
+        max-height: 100px;
       `
         : `
         margin: 0;
         height: var(--mobile-size);
+        max-height: 150px;
       `}
   }
 `;
