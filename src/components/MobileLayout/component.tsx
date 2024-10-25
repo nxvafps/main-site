@@ -54,9 +54,6 @@ const StyledHeaderLeft = styled.div`
   justify-content: flex-start;
   height: 80px;
   background-color: #121212;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
 `;
 
 const StyledMotionNav = styled(motion.nav)`
