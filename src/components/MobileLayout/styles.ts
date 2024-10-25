@@ -27,6 +27,11 @@ export const HeaderLeft = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+  height: 80px;
+  background-color: #121212;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 `;
 
 export const Icon = styled.img`
