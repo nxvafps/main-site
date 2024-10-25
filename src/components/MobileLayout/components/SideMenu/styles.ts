@@ -1,20 +1,11 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-interface SideMenuProps {
-  $isOpen: boolean;
-}
-
-export const StyledSideMenu = styled.div<SideMenuProps>`
+export const StyledSideMenu = styled(motion.div)`
+  position: absolute;
+  top: 100px;
+  width: 300px;
   display: flex;
   flex-direction: column;
-  position: fixed;
-  top: 80px;
-  right: 0;
-  height: calc(100% - 80px);
-  width: 200px;
-  background-color: #121212;
-  transform: ${({ $isOpen }) =>
-    $isOpen ? "translateX(0)" : "translateX(100%)"};
-  transition: transform 0.5s ease-in-out;
-  z-index: 1000;
+  gap: 20px;
 `;
