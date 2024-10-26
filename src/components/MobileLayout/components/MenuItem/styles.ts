@@ -9,10 +9,9 @@ export const MenuItem = styled(motion.div)`
   padding: 0 45px;
 `;
 
-export const Icon = styled.div`
+export const Icon = styled.img`
   width: 50px;
   height: 50px;
-  border-radius: 50%;
   flex: 50px 0;
   display: flex;
   align-items: center;

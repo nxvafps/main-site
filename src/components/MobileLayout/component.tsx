@@ -44,7 +44,7 @@ const MobileLayout: React.FC = () => {
           ref={containerRef}
         >
           <NavBackground variants={sidebar} />
-          <Sidemenu />
+          <Sidemenu onClose={() => toggleOpen()} />
           <Hamburger onClick={() => toggleOpen()} />
         </Nav>
       </Header>
