@@ -42,8 +42,9 @@ const MobileLayout: React.FC = () => {
           animate={isOpen ? "open" : "closed"}
           custom={height}
           ref={containerRef}
+          $isOpen={isOpen}
         >
-          <NavBackground variants={sidebar} />
+          <NavBackground variants={sidebar} $isOpen={isOpen} />
           <Sidemenu onClose={() => toggleOpen()} />
           <Hamburger onClick={() => toggleOpen()} />
         </Nav>

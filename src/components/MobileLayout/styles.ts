@@ -36,22 +36,24 @@ export const Text = styled.p`
   color: #ffffff;
 `;
 
-export const Nav = styled(motion.nav)`
+export const Nav = styled(motion.nav)<OverlayProps>`
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   width: 300px;
   z-index: 1000;
+  pointer-events: ${({ $isOpen }) => ($isOpen ? "auto" : "none")};
 `;
 
-export const NavBackground = styled(motion.div)`
+export const NavBackground = styled(motion.div)<OverlayProps>`
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   width: 300px;
-  background: #121212;
+  background: linear-gradient(135deg, #121212, #323232);
+  pointer-events: ${({ $isOpen }) => ($isOpen ? "auto" : "none")};
 `;
 
 export const MainContent = styled.div``;

@@ -15,4 +15,5 @@ export const StyledButton = styled.button`
   height: 80px;
   border-radius: 50%;
   background: transparent;
+  pointer-events: auto;
 `;
