@@ -15,7 +15,7 @@ This project is my portfolio website, it is currently a work in progress as I wo
 
 ## Technologies used
 
-Javascript
+JavaScript
 
 <figure>
   <img src="/src/assets/images/Technologies/javascript.svg" alt="JavaScript" width="40" height="40">
