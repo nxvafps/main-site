@@ -16,7 +16,7 @@ This project is my portfolio website, it is currently a work in progress as I wo
 ## Technologies used
 
 - <img src="/src/assets/images/Technologies/javascript.svg" alt="JavaScript" width="40" height="40"> JavaScript
-- <img src="/src/assets/images/Technologies/Typescript.svg" alt="TypeScript" width="40" height="40"> TypeScript
+- <img src="/src/assets/images/Technologies/typescript.svg" alt="TypeScript" width="40" height="40"> TypeScript
 - <img src="/src/assets/images/Technologies/react.svg" alt="React" width="40" height="40"> React
 - <img src="/src/assets/images/Technologies/nodejs-icon.svg" alt="Nodejs" width="40" height="40"> Nodejs
 - <img src="/src/assets/images/Technologies/framermotion.svg" alt="Framer Motion" width="40" height="40"> Framer Motion
