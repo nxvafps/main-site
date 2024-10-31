@@ -15,33 +15,46 @@ This project is my portfolio website, it is currently a work in progress as I wo
 
 ## Technologies used
 
+Javascript
+
 <figure>
   <img src="/src/assets/images/Technologies/javascript.svg" alt="JavaScript" width="40" height="40">
-  <figcaption>JavaScript</figcaption>
-</figure>  
+</figure>
+
+TypeScript
+
 <figure>
   <img src="/src/assets/images/Technologies/typescript.svg" alt="TypeScript" width="40" height="40">
-  <figcaption>TypeScript</figcaption>
-</figure>  
+</figure>
+
+React
+
 <figure>
   <img src="/src/assets/images/Technologies/react.svg" alt="React" width="40" height="40">
-  <figcaption>React</figcaption>
-</figure>  
+</figure>
+
+Nodejs
+
 <figure>
   <img src="/src/assets/images/Technologies/nodejs-icon.svg" alt="Nodejs" width="40" height="40">
-  <figcaption>Nodejs</figcaption>
-</figure>  
+</figure>
+
+Framer Motion
+
 <figure>
   <img src="/src/assets/images/Technologies/framermotion.svg" alt="Framer Motion" width="40" height="40">
-  <figcaption>Framer Motion</figcaption>
-</figure>  
+</figure>
+
+Storybook
+
 <figure>
   <img src="/src/assets/images/Technologies/storybook.svg" alt="storybook" width="40" height="40">
-  <figcaption>Storybook (planned)</figcaption>
-</figure>  
+</figure>
+
+VSCode
+
 <figure>
   <img src="/src/assets/images/Technologies/vscode.svg" alt="VS Code" width="40" height="40">
-  <figcaption>VS Code</figcaption>
 </figure>
 
 ## To do list
