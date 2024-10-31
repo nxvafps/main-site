@@ -18,33 +18,63 @@ import {
   ButtonContainer,
 } from "./style";
 
+const NavItems = [
+  {
+    text: "Home",
+    href: "/",
+  },
+  {
+    text: "About",
+    href: "/about",
+  },
+  {
+    text: "Portfolio",
+    href: "/portfolio",
+  },
+  {
+    text: "Contact",
+    href: "/contact",
+  },
+];
+
+const NavMenu: React.FC = () => (
+  <Nav>
+    {NavItems.map((item, index) => (
+      <ButtonContainer key={index}>
+        <NavButton text={item.text} href={item.href} />
+      </ButtonContainer>
+    ))}
+  </Nav>
+);
+
+const HeaderInfo: React.FC = () => (
+  <>
+    <Icon src={siteIcon} alt="Site Icon" />
+    <Text>novaFPS</Text>
+    <Divider />
+  </>
+);
+
+const HeaderContent: React.FC = () => (
+  <HeaderLeft>
+    <HeaderInfo />
+    <NavMenu />
+  </HeaderLeft>
+);
+
+const PageContent: React.FC = () => (
+  <>
+    <Outlet />
+    <Footer />
+  </>
+);
+
 const DesktopLayout: FC = () => (
   <>
     <Header>
-      <HeaderLeft>
-        <Icon src={siteIcon} alt="logo"></Icon>
-        <Text>novaFPS</Text>
-        <Divider />
-        <Nav>
-          <ButtonContainer>
-            <NavButton text="Home" href="/" />
-          </ButtonContainer>
-          <ButtonContainer>
-            <NavButton text="About" href="/about" />
-          </ButtonContainer>
-          <ButtonContainer>
-            <NavButton text="Portfolio" href="/portfolio" />
-          </ButtonContainer>
-          <ButtonContainer>
-            <NavButton text="Contact" href="/contact" />
-          </ButtonContainer>
-        </Nav>
-      </HeaderLeft>
+      <HeaderContent />
     </Header>
-    <div>
-      <Outlet />
-      <Footer />
-    </div>
+    <PageContent />
   </>
 );
 

@@ -66,9 +66,14 @@ VSCode
 
 ## Update Notes
 
+<!-- Version MAJOR.MINOR.PATCH -->
+
 ### Version 1.0.0 <!-- omit in toc -->
 
-- Version at the time of updating the readme.
+Version at the time of updating the readme.
 
-</div
->
+### Version 1.0.1 <!-- omit in toc -->
+
+Refactored DesktopLayout and Footer components to reduce complexity.
+
+</div>

@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React from "react";
 
 //Assets
 import {
@@ -15,72 +15,61 @@ import {
 //Styles
 import { FooterContainer, Image, LinkStyled } from "./styles";
 
-const Footer: FC = () => (
+const socialLinks = [
+  {
+    href: "https://www.linkedin.com/in/oliver-quirk-1350b416b/",
+    alt: "Linkedin Icon",
+    src: linkedin,
+  },
+  {
+    href: "https://github.com/nxvafps",
+    alt: "Github Icon",
+    src: github,
+  },
+  {
+    href: "https://www.youtube.com/@nxvafps",
+    alt: "Youtube Icon",
+    src: youtube,
+  },
+  {
+    href: "https://www.x.com/nxvafps",
+    alt: "Twitter Icon",
+    src: twitter,
+  },
+  {
+    href: "https://www.tiktok.com/@nxvafps",
+    alt: "Tiktik Icon",
+    src: tiktok,
+  },
+  {
+    href: "https://www.twitch.com/nxvafps",
+    alt: "Twitch Icon",
+    src: twitch,
+  },
+  {
+    href: "https://www.discord.gg/tSNujPdzAu",
+    alt: "Discord Icon",
+    src: discord,
+  },
+  {
+    href: "https://steamcommunity.com/id/nxvaFPS/",
+    alt: "Steam Icon",
+    src: steam,
+  },
+];
+const Footer: React.FC = () => (
   <>
     <FooterContainer>
-      <LinkStyled
-        href="https://www.linkedin.com/in/oliver-quirk-1350b416b/"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <Image alt="Linkedin Icon" src={linkedin} />
-      </LinkStyled>
-
-      <LinkStyled
-        href="https://github.com/nxvafps"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <Image alt="Github Icon" src={github} />
-      </LinkStyled>
-
-      <LinkStyled
-        href="https://www.youtube.com/@nxvafps"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <Image alt="Youtube Icon" src={youtube} />
-      </LinkStyled>
-
-      <LinkStyled
-        href="https://www.x.com/nxvafps"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <Image alt="Twitter Icon" src={twitter} />
-      </LinkStyled>
-
-      <LinkStyled
-        href="https://www.tiktok.com/@nxvafps"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <Image alt="Tiktik Icon" src={tiktok} />
-      </LinkStyled>
-
-      <LinkStyled
-        href="https://www.twitch.com/nxvafps"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <Image alt="Twitch Icon" src={twitch} />
-      </LinkStyled>
-
-      <LinkStyled
-        href="https://www.discord.gg/tSNujPdzAu"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <Image alt="Discord Icon" src={discord} />
-      </LinkStyled>
-
-      <LinkStyled
-        href="https://steamcommunity.com/id/nxvaFPS/"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <Image alt="Steam Icon" src={steam} />
-      </LinkStyled>
+      {socialLinks.map((link, index) => (
+        <LinkStyled
+          key={index}
+          href={link.href}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Image alt={link.alt} src={link.src} />
+        </LinkStyled>
+      ))}
     </FooterContainer>
   </>
 );
