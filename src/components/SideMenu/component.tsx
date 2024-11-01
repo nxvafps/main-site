@@ -4,12 +4,7 @@ import React from "react";
 import { sideMenuVariants } from "./animations";
 
 //Assets
-import {
-  aboutIcon,
-  contactIcon,
-  homeIcon,
-  portfolioIcon,
-} from "../../../../assets";
+import { aboutIcon, contactIcon, homeIcon, portfolioIcon } from "../../assets";
 //Components
 import { SidemenuItem } from "../MenuItem";
 

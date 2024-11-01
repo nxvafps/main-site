@@ -76,4 +76,8 @@ Version at the time of updating the readme.
 
 Refactored DesktopLayout and Footer components to reduce complexity.
 
+### Version 1.0.2 <!-- omit in toc -->
+
+Moved side menu subcomponents to the main component directories.
+
 </div>

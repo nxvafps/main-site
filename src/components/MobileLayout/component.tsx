@@ -11,7 +11,7 @@ import { siteIcon } from "../../assets";
 
 //Components
 import { Footer } from "..";
-import { Sidemenu, Hamburger } from "./components";
+import { Sidemenu, Hamburger } from "../";
 
 //Styles
 import {

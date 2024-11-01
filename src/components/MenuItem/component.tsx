@@ -6,7 +6,7 @@ import { menuItemVariants } from "./animations";
 // Styles
 import { MenuItem, Icon, Text } from "./styles";
 
-import { SideMenuProps } from "../../../../types";
+import { SideMenuProps } from "../../types";
 
 interface SideMenuItemProps extends SideMenuProps {
   onClick: () => void;

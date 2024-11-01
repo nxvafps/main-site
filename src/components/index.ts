@@ -6,6 +6,9 @@ import NavButton from "./NavButton/component";
 import Footer from "./Footer/component";
 import Typewriter from "./Typewriter/component";
 import CloseIcon from "./CloseIcon/component";
+import SidemenuItem from "./MenuItem/component";
+import Sidemenu from "./SideMenu/component";
+import Hamburger from "./Hamburger/component";
 
 export {
   DesktopLayout,
@@ -16,4 +19,7 @@ export {
   Footer,
   Typewriter,
   CloseIcon,
+  Sidemenu,
+  SidemenuItem,
+  Hamburger,
 };
