@@ -8,10 +8,10 @@ const blink = keyframes`
 
 export const Wrapper = styled.div`
   display: flex;
-  flex-direction: center;
+  flex-direction: row;
 `;
 
-export const StaticText = styled.span`
+export const StaticText = styled.p`
   color: #ffffff;
   font-size: 25px;
   margin-right: 10px;

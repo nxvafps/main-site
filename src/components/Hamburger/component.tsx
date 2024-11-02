@@ -12,13 +12,13 @@ import {
 //Styles
 import { StyledButton } from "./styles";
 
-interface HamburgerProps {
+export interface HamburgerProps {
   onClick: () => void;
 }
 
-interface PathProps extends SVGMotionProps<SVGPathElement> {}
+export interface PathProps extends SVGMotionProps<SVGPathElement> {}
 
-const Path: React.FC<PathProps> = (props) => (
+const Path = (props: PathProps) => (
   <motion.path
     fill="transparent"
     strokeWidth="3"
@@ -28,8 +28,8 @@ const Path: React.FC<PathProps> = (props) => (
   />
 );
 
-const Hamburger: React.FC<HamburgerProps> = ({ onClick }) => (
-  <StyledButton onClick={onClick}>
+const Hamburger = ({ onClick, ...props }: HamburgerProps) => (
+  <StyledButton onClick={onClick} {...props}>
     <svg width="80" height="80" viewBox="0 0 80 80">
       <Path
         d="M 25 30 L 55 30"

@@ -62,7 +62,7 @@ VSCode
 => Make header sticky again.  
 => Populate about me page.  
 => Finish formatting the technology selection and add animations for transitions between selected and not selected.  
-=> Implement Storybook.
+=> Add stories for DesktopLayout, Footer, SideMenuItem, and MobileLayout.
 
 ## Update Notes
 
@@ -79,5 +79,10 @@ Refactored DesktopLayout and Footer components to reduce complexity.
 ### Version 1.0.2 <!-- omit in toc -->
 
 Moved side menu subcomponents to the main component directories.
+
+### Version 1.1.0 <!-- omit in toc -->
+
+Started implementing storybook, converted Close Icon,  
+Hamburger button, NavButton, Title, and Typewriter to stories.
 
 </div>

@@ -1,20 +1,18 @@
-import React, { FC } from "react";
+import React from "react";
 
 //Styles
 import StyledNavButton from "./styles";
 
-interface NavButtonProps {
+export interface NavButtonProps {
   text: string;
   href: string;
   onClick?: () => void;
 }
 
-const NavButton: FC<NavButtonProps> = ({ text, href, onClick }) => {
-  return (
-    <StyledNavButton to={href} onClick={onClick}>
-      {text}
-    </StyledNavButton>
-  );
-};
+const NavButton = ({ text, href, onClick, ...props }: NavButtonProps) => (
+  <StyledNavButton to={href} onClick={onClick} {...props}>
+    {text}
+  </StyledNavButton>
+);
 
 export default NavButton;

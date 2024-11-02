@@ -1,18 +1,16 @@
-import React, { FC, useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { Wrapper, StaticText, DynamicText } from "./styles";
 
-const Typewriter: FC = () => {
-  const options = useMemo(
-    () => [
-      "Problem Solver",
-      "Web Developer",
-      "Software Developer",
-      "Youtuber",
-      "Designer",
-      "Streamer",
-    ],
-    []
-  );
+export interface TypewriterProps {
+  mainText: string;
+  dynamicText: string[];
+}
+
+const Typewriter = ({
+  mainText = "Static Text",
+  dynamicText = ["Option 1", "Option 2", "Option 3"],
+}: TypewriterProps) => {
+  const options = useMemo(() => dynamicText, [dynamicText]);
 
   const [currentOptionIndex, setCurrentOptionIndex] = useState(0);
   const [currentText, setCurrentText] = useState("");
@@ -49,7 +47,7 @@ const Typewriter: FC = () => {
 
   return (
     <Wrapper>
-      <StaticText>I am a </StaticText>
+      <StaticText>{mainText}</StaticText>
       <DynamicText>{currentText}</DynamicText>
     </Wrapper>
   );

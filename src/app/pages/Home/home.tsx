@@ -124,13 +124,25 @@ const Home: React.FC = () => {
     },
   ];
 
+  const typeWriterDynamicText = [
+    "Problem Solver",
+    "Web Developer",
+    "Software Developer",
+    "Youtuber",
+    "Designer",
+    "Streamer",
+  ];
+
   return (
     <>
       <Intro>
         <IntroLeft>
           <IntroText1>Hi, I'm Ollie</IntroText1>
           <Placeholder>
-            <Typewriter />
+            <Typewriter
+              mainText="I am a "
+              dynamicText={typeWriterDynamicText}
+            />
           </Placeholder>
           <IntroText2>
             Here you'll find my web development portfolio showcasing the
@@ -146,7 +158,7 @@ const Home: React.FC = () => {
         </IntroRight>
       </Intro>
       <SkillShowcase>
-        <Title text="Technologies" underline />
+        <Title text="Technologies" type="h2" underline />
         <Technologies $isSelected={!!selectedIcon}>
           <IconContainer $isSelected={!!selectedIcon}>
             {techIcons.map((icon, index) => (
