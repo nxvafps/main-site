@@ -63,6 +63,7 @@ VSCode
 => Populate about me page.  
 => Finish formatting the technology selection and add animations for transitions between selected and not selected.  
 => Add stories for DesktopLayout, Footer, SideMenuItem, and MobileLayout.
+=> Implement a11y to check for accessibility.
 
 ## Update Notes
 
