@@ -1,6 +1,6 @@
-import React, { FC } from "react";
+import React from "react";
 
-const CloseIcon: FC = () => (
+const CloseIcon: React.FC = () => (
   <svg
     width="24"
     height="24"
