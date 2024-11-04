@@ -90,4 +90,8 @@ Hamburger button, NavButton, Title, and Typewriter to stories.
 
 Added workflows to enhance deployment time.
 
+### Version 1.2.1 <!--omit in toc -->
+
+Fixed issues with workflows.
+
 </div>
