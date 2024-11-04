@@ -26,4 +26,4 @@ jobs:
           npm install
           npm run build
           pm2 restart all
-          sudo systemctl restart nginx
+          echo "${{ secrets.VPS_SUDO_PASSWORD }}" | sudo -S systemctl restart nginx
