@@ -86,4 +86,8 @@ Moved side menu subcomponents to the main component directories.
 Started implementing storybook, converted Close Icon,  
 Hamburger button, NavButton, Title, and Typewriter to stories.
 
+### Version 1.2.0 <!-- omit in toc -->
+
+Added workflows to enhance deployment time.
+
 </div>
