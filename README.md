@@ -1,3 +1,4 @@
+
 <div align=center>
 
 # NV1: Portfolio Site
@@ -90,8 +91,12 @@ Hamburger button, NavButton, Title, and Typewriter to stories.
 
 Added workflows to enhance deployment time.
 
-### Version 1.2.1 <!--omit in toc -->
+### Version 1.2.1 <!-- omit in toc -->
 
 Fixed issues with workflow not exexuting.
+
+### Version 1.3.0 <!-- omit in toc -->
+
+Added ProjectItem component.
 
 </div>

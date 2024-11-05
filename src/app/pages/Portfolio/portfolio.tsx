@@ -18,7 +18,7 @@ const Portfolio: React.FC = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/api/projects")
+      .get("http://api.novafps.com/api/projects/all")
       .then((response) => {
         setData(response.data);
       })
