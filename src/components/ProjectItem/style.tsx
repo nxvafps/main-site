@@ -5,8 +5,10 @@ export const ProjectIcon = styled.img`
   grid-row: 1/4;
   border-radius: 20px;
   align-self: start;
-  padding: 10px;
+  padding: 20px;
   max-width: 100%;
+  box-sizing: border-box;
+  border-radius: 30px;
 `;
 
 export const ProjectName = styled.h3`
@@ -38,16 +40,23 @@ export const ProjectDetails = styled.p`
   padding: 10px;
 `;
 
-export const ProjectRepo = styled.a`
+export const LinkContainer = styled.div`
   grid-column: 1/-1;
-  font-size: 14px;
+  border-radius: 0 0 20px 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: #ffffff;
+`;
+
+export const Link = styled.a`
   text-decoration: none;
   padding: 10px;
   background-color: #333333;
   color: #ffffff;
   width: 100%;
   text-align: center;
-  border-radius: 0 0 20px 20px;
   &:hover {
     background-color: #ffffff;
     color: #333333;
