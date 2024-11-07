@@ -64,6 +64,7 @@ export const Link = styled.a`
 `;
 
 export const StyledProjectItem = styled.div`
+  min-width: 300px;
   background-color: #333333;
   border-radius: 20px;
   overflow: hidden;

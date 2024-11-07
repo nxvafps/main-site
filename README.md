@@ -1,4 +1,3 @@
-
 <div align=center>
 
 # NV1: Portfolio Site
@@ -98,5 +97,9 @@ Fixed issues with workflow not exexuting.
 ### Version 1.3.0 <!-- omit in toc -->
 
 Added ProjectItem component.
+
+### Version 1.4.0 <!-- omit in toc -->
+
+Added ProjectList Component and its respective stories.
 
 </div>

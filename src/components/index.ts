@@ -8,6 +8,7 @@ import CloseIcon from "./CloseIcon/component";
 import SidemenuItem from "./MenuItem/component";
 import Sidemenu from "./SideMenu/component";
 import Hamburger from "./Hamburger/component";
+import ProjectDisplay from "./ProjectList/component";
 
 export {
   DesktopLayout,
@@ -20,4 +21,5 @@ export {
   Sidemenu,
   SidemenuItem,
   Hamburger,
+  ProjectDisplay,
 };
