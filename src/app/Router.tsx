@@ -30,5 +30,4 @@ const AppRouter: React.FC = () => {
     </Routes>
   );
 };
-
 export default AppRouter;

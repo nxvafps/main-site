@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const ProjectIcon = styled.img`
   grid-column: 1;
@@ -21,13 +22,30 @@ export const ProjectName = styled.h3`
   padding: 10px;
 `;
 
-export const HorizontalRule = styled.hr`
+export const HorizontalRuleContainer = styled.div`
   grid-column: 2;
   grid-row: 2;
   width: 80%;
-  border: 0;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+`;
+
+export const HorizontalRule = styled.hr`
+  border: none;
   border-top: 1px solid #ffffff;
-  margin: 0 auto 0 auto;
+  margin: 0;
+`;
+
+export const ProjectStatus = styled.span`
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333333;
+  padding: 0 10px;
+  color: #ffffff;
+  //border: 1px solid #ffffff;
 `;
 
 export const ProjectDetails = styled.p`
@@ -63,7 +81,7 @@ export const Link = styled.a`
   }
 `;
 
-export const StyledProjectItem = styled.div`
+export const StyledProjectItem = styled(motion.div)`
   min-width: 300px;
   background-color: #333333;
   border-radius: 20px;
@@ -72,4 +90,11 @@ export const StyledProjectItem = styled.div`
   grid-template-columns: 40% 1fr;
   grid-template-rows: auto auto 1fr;
   align-items: start;
+  position: relative;
+  border: 1px solid transparent;
+
+  &:hover {
+    border: 1px solid #ffffff;
+  }
+  //TODO: add animations for hover border appearing from the top left and expanding around the card
 `;

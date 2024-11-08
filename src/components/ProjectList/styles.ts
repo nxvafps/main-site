@@ -5,9 +5,9 @@ export const ProjectList = styled.div`
   margin: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  gap: 30px;
 
-  @media (min-width: 1175px) {
+  @media (min-width: 1238px) {
     grid-template-columns: repeat(3, 1fr);
   }
 `;
