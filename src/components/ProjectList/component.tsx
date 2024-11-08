@@ -17,7 +17,7 @@ const useFetchProjects = () => {
   useEffect(() => {
     setStatus("loading");
     axios
-      .get("http://api.novafps.com/api/projects/all")
+      .get("https://api.novafps.com/api/projects/all")
       .then((response) => {
         setStatus("success");
         setProjects(response.data);

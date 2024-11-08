@@ -102,4 +102,8 @@ Added ProjectItem component.
 
 Added ProjectList Component and its respective stories.
 
+### Version 1.4.1 <!-- omit in toc -->
+
+Updated API to serve over https instead of http.
+
 </div>
