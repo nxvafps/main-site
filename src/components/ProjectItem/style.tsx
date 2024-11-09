@@ -4,12 +4,11 @@ import { motion } from "framer-motion";
 export const ProjectIcon = styled.img`
   grid-column: 1;
   grid-row: 1/4;
-  border-radius: 20px;
   align-self: start;
-  padding: 20px;
+  padding: 10px;
   max-width: 100%;
   box-sizing: border-box;
-  border-radius: 30px;
+  border-radius: 20px;
 `;
 
 export const ProjectName = styled.h3`
@@ -20,6 +19,11 @@ export const ProjectName = styled.h3`
   align-self: start;
   margin: 0;
   padding: 10px;
+  font-size: clamp(1rem, 1.5vw, 2rem);
+
+  @media (max-width: 800px) {
+    font-size: clamp(1rem, 3.3vw, 3rem);
+  }
 `;
 
 export const HorizontalRuleContainer = styled.div`
@@ -87,11 +91,12 @@ export const StyledProjectItem = styled(motion.div)`
   border-radius: 20px;
   overflow: hidden;
   display: grid;
-  grid-template-columns: 40% 1fr;
+  grid-template-columns: 30% 1fr;
   grid-template-rows: auto auto 1fr;
   align-items: start;
   position: relative;
   border: 1px solid transparent;
+  transform-origin: center;
 
   &:hover {
     border: 1px solid #ffffff;

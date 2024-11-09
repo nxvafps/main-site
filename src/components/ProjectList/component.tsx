@@ -31,13 +31,6 @@ const useFetchProjects = () => {
 };
 
 const ProjectDisplay: React.FC = () => {
-  /*
-  const projects: Project[] = useSelector(
-    (state: RootState) => state.projects.projects
-  );
-  const { status } = useSelector((state: RootState) => state.project);
-*/
-
   const { status, projects } = useFetchProjects();
 
   const LoadingRow = <div>Loading</div>;
