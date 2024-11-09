@@ -17,7 +17,7 @@ const useFetchProjects = () => {
   useEffect(() => {
     setStatus("loading");
     axios
-      .get("https://api.novafps.com/api/projects/all")
+      .get("https://api.novafps.com/projects/all")
       .then((response) => {
         setStatus("success");
         setProjects(response.data);
@@ -78,4 +78,4 @@ const ProjectDisplay: React.FC = () => {
 
 export default ProjectDisplay;
 // TODO: ADD MORE STORIES FOR THIS COMPONENT
-// TODO: ADD A LOADING SPINNER
+// TODO: UPDATE THE FORMAT OF THE LOADING STATE

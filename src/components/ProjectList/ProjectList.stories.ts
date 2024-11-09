@@ -65,7 +65,7 @@ export const MockedSuccess: Story = {
   parameters: {
     msw: {
       handlers: [
-        http.get("https://api.novafps.com/api/projects/all", () => {
+        http.get("https://api.novafps.com/projects/all", () => {
           return HttpResponse.json(TestData);
         }),
       ],
@@ -77,7 +77,7 @@ export const MockedError: Story = {
   parameters: {
     msw: {
       handlers: [
-        http.get("https://api.novafps.com/api/projects/all", async () => {
+        http.get("https://api.novafps.com/projects/all", async () => {
           await delay(800);
           return new HttpResponse(null, {
             status: 403,
