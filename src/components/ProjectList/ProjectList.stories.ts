@@ -9,6 +9,10 @@ import ProjectDisplay from "./component";
 const meta = {
   component: ProjectDisplay,
   title: "ProjectDisplay",
+  parameters: {
+    layout: "centered",
+  },
+  tags: ["autodocs"],
 } satisfies Meta<typeof ProjectDisplay>;
 
 export default meta;
