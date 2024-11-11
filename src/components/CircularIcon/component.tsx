@@ -5,11 +5,13 @@ import { Icon } from "./styles";
 export interface CircularIconProps {
   src: string;
   alt: string;
+  onClick?: () => void;
 }
 
 const CircularIcon = ({ src, alt, ...props }: CircularIconProps) => {
   return (
     <Icon
+      layout="position"
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
       src={src}
