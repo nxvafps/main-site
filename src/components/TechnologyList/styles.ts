@@ -34,12 +34,12 @@ export const Details = styled(motion.div)`
 
 export const DetailsTitle = styled(motion.h3)`
   margin: 0;
-  font-size: 2rem;
+  font-size: 2vw;
 `;
 
 export const DetailsDescription = styled(motion.p)`
   margin-top: 10px;
-  font-size: 1rem;
+  font-size: 1vw;
 `;
 
 export const CloseButton = styled(motion.button)`
@@ -53,18 +53,18 @@ export const CloseButton = styled(motion.button)`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 24px;
-  height: 24px;
+  width: 35px;
+  height: 35px;
   color: #ffffff;
 `;
 
 export const IconList = styled(motion.div)`
   display: grid;
   grid-template-areas: "icons details";
-  gap: 20px;
+  gap: 40px;
   margin: 20px;
   min-height: 80vh;
   max-height: 80vh;
-  min-width: 90vw;
-  max-width: 90vw;
+  width: 90vw;
+  max-width: 1000px;
 `;
