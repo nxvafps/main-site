@@ -28,8 +28,7 @@ import {
 
 import { IconObj } from "../../types";
 
-import { CircularIcon } from "../CircularIcon";
-import { CloseIcon } from "../CloseIcon";
+import { CircularIcon, CloseIcon } from "../";
 
 export interface IconListProps {
   $isSelected: boolean;
@@ -149,13 +148,7 @@ const TechnologyList = () => {
           transition={{ duration: 0.5 }}
           layout
         >
-          <CloseButton
-            onClick={handleCloseClick}
-            initial={{ display: "none" }}
-            animate={{ display: selectedIcon ? "block" : "none" }}
-            transition={{ duration: 0.5 }}
-            layout
-          >
+          <CloseButton>
             <CloseIcon />
           </CloseButton>
           <DetailsTitle>{selectedIcon?.name}</DetailsTitle>

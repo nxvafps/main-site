@@ -1,29 +1,10 @@
-import { useSelector, useDispatch } from "react-redux";
-import { setSelectedIcon, clearSelectedIcon, RootState } from "../../../stores";
 import { useNavigate } from "react-router-dom";
 
 //Assets
-import {
-  me,
-  bootstrap,
-  css,
-  express,
-  git,
-  html,
-  node,
-  react,
-  sass,
-  tailwind,
-  javascript,
-  postgresql,
-  redux,
-  copilot,
-} from "../../../assets";
+import { me } from "../../../assets";
 
 //Components
-import { CloseIcon, Title, Typewriter } from "../../../components";
-
-//Hooks
+import { Title, Typewriter, TechnologyList } from "../../../components";
 
 //Styles
 import {
@@ -35,94 +16,11 @@ import {
   IntroRight,
   Image,
   SkillShowcase,
-  Technologies,
-  IconContainer,
-  Icon,
-  DetailsBox,
-  DetailsTitle,
-  DetailsDescription,
-  CloseButton,
+  TechnologyListWrapper,
 } from "./styles";
-
-//Types
-import { IconObj } from "../../../types";
 
 const Home: React.FC = () => {
   const navigate = useNavigate();
-  const selectedIcon = useSelector((state: RootState) => state.selectedIcon);
-  const dispatch = useDispatch();
-
-  const handleIconClick = (icon: IconObj) => dispatch(setSelectedIcon(icon));
-
-  const handleCloseClick = () => dispatch(clearSelectedIcon());
-
-  const techIcons: IconObj[] = [
-    {
-      name: "HTML",
-      src: html,
-      description: "Here I talk about what I know about HTML.",
-    },
-    {
-      name: "CSS",
-      src: css,
-      description: "Here I talk about what I know about CSS.",
-    },
-    {
-      name: "SASS",
-      src: sass,
-      description: "Here I talk about what I know about SASS.",
-    },
-    {
-      name: "Bootstrap",
-      src: bootstrap,
-      description: "Here I talk about what I know about Bootstrap.",
-    },
-    {
-      name: "Tailwind",
-      src: tailwind,
-      description: "Here I talk about what I know about Tailwind.",
-    },
-    {
-      name: "Javascript",
-      src: javascript,
-      description: "Here I talk about what I know about Javascript.",
-    },
-    {
-      name: "Node.js",
-      src: node,
-      description: "Here I talk about what I know about Node.js.",
-    },
-    {
-      name: "React.js",
-      src: react,
-      description: "Here I talk about what I know about React.js.",
-    },
-    {
-      name: "Redux",
-      src: redux,
-      description: "Here I talk about what I know about Redux.",
-    },
-    {
-      name: "Express.js",
-      src: express,
-      description: "Here I talk about what I know about Express.js.",
-    },
-    {
-      name: "PostgreSQL",
-      src: postgresql,
-      description: "Here I talk about what I know about PostgreSQL.",
-    },
-    {
-      name: "Git",
-      src: git,
-      description: "Here I talk about what I know about Git.",
-    },
-    {
-      name: "Copilot",
-      src: copilot,
-      description: "Here I talk about what I know about Copilot.",
-    },
-  ];
 
   const typeWriterDynamicText = [
     "Problem Solver",
@@ -159,30 +57,9 @@ const Home: React.FC = () => {
       </Intro>
       <SkillShowcase>
         <Title text="Technologies" type="h2" underline />
-        <Technologies $isSelected={!!selectedIcon}>
-          <IconContainer $isSelected={!!selectedIcon}>
-            {techIcons.map((icon, index) => (
-              <Icon
-                key={index}
-                src={icon.src}
-                alt={icon.name}
-                onClick={() => handleIconClick(icon)}
-                $isSelected={!!selectedIcon}
-              />
-            ))}
-          </IconContainer>
-          {selectedIcon && (
-            <DetailsBox>
-              <CloseButton onClick={handleCloseClick}>
-                <CloseIcon />
-              </CloseButton>
-              <DetailsTitle>{selectedIcon.name}</DetailsTitle>
-              <DetailsDescription>
-                {selectedIcon.description}
-              </DetailsDescription>
-            </DetailsBox>
-          )}
-        </Technologies>
+        <TechnologyListWrapper>
+          <TechnologyList />
+        </TechnologyListWrapper>
       </SkillShowcase>
     </>
   );

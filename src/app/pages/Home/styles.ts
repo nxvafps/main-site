@@ -270,48 +270,8 @@ export const Icon = styled.img<TechIconProps>`
   }
 `;
 
-export const DetailsBox = styled.div`
-  position: relative;
-  padding: 20px;
-  background-color: #333333;
-  color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-
-  @media (min-width: 768px) {
-    //desktop display
-    width: 40vw;
-  }
-
-  @media (max-width: 768px) {
-    //mobile display
-    width: 80vw;
-    margin: auto;
-  }
-`;
-
-export const CloseButton = styled.button`
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
+export const TechnologyListWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 24px;
-  height: 24px;
-  color: #ffffff;
-`;
-
-export const DetailsTitle = styled.h3`
-  margin: 0;
-  font-size: 2rem;
-`;
-
-export const DetailsDescription = styled.p`
-  margin-top: 10px;
-  font-size: 1rem;
 `;

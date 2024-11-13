@@ -1,14 +1,16 @@
-import DesktopLayout from "./DesktopLayout/component";
-import MobileLayout from "./MobileLayout/component";
-import Title from "./Title/component";
-import NavButton from "./NavButton/component";
-import Footer from "./Footer/component";
-import Typewriter from "./Typewriter/component";
-import CloseIcon from "./CloseIcon/component";
-import SidemenuItem from "./MenuItem/component";
-import Sidemenu from "./SideMenu/component";
-import Hamburger from "./Hamburger/component";
-import ProjectDisplay from "./ProjectList/component";
+import { DesktopLayout } from "./DesktopLayout";
+import { MobileLayout } from "./MobileLayout";
+import { Title } from "./Title";
+import { NavButton } from "./NavButton";
+import { Footer } from "./Footer";
+import { Typewriter } from "./Typewriter";
+import { CloseIcon } from "./CloseIcon";
+import { SidemenuItem } from "./MenuItem";
+import { Sidemenu } from "./SideMenu";
+import { Hamburger } from "./Hamburger";
+import { ProjectDisplay } from "./ProjectList";
+import { TechnologyList } from "./TechnologyList";
+import { CircularIcon } from "./CircularIcon";
 
 export {
   DesktopLayout,
@@ -21,5 +23,7 @@ export {
   Sidemenu,
   SidemenuItem,
   Hamburger,
+  CircularIcon,
   ProjectDisplay,
+  TechnologyList,
 };
