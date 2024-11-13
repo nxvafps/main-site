@@ -92,7 +92,7 @@ Added workflows to enhance deployment time.
 
 ### Version 1.2.1 <!-- omit in toc -->
 
-Fixed issues with workflow not exexuting.
+Fixed issues with workflow not executing.
 
 ### Version 1.3.0 <!-- omit in toc -->
 
