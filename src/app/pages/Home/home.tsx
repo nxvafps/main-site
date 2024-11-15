@@ -66,3 +66,4 @@ const Home: React.FC = () => {
 };
 
 export default Home;
+//TODO: add api endpoint for current projects and add a showcase for them.

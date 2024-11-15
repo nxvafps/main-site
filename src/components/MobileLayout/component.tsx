@@ -7,7 +7,7 @@ import { Outlet } from "react-router-dom";
 import { sidebar } from "./animations";
 
 //Assets
-import { siteIcon } from "../../assets";
+import { generalIcons } from "../../assets";
 
 //Components
 import { Footer } from "..";
@@ -34,7 +34,7 @@ const MobileLayout: React.FC = () => {
     <>
       <Header>
         <HeaderLeft>
-          <Icon src={siteIcon} alt="logo"></Icon>
+          <Icon src={generalIcons.siteIcon} alt="logo"></Icon>
           <Text>novaFPS</Text>
         </HeaderLeft>
         <Nav

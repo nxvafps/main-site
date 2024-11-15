@@ -3,8 +3,11 @@ import React from "react";
 //Assets
 import { socialIcons } from "../../assets";
 
+//Components
+import { CircularIcon } from "../CircularIcon";
+
 //Styles
-import { FooterContainer, Image, LinkStyled } from "./styles";
+import { FooterContainer, LinkStyled } from "./styles";
 
 const socialLinks = [
   {
@@ -19,33 +22,8 @@ const socialLinks = [
   },
   {
     href: "https://www.youtube.com/@nxvafps",
-    alt: "Youtube Icon",
-    src: socialIcons.youtube,
-  },
-  {
-    href: "https://www.x.com/nxvafps",
-    alt: "Twitter Icon",
-    src: socialIcons.twitter,
-  },
-  {
-    href: "https://www.tiktok.com/@nxvafps",
-    alt: "Tiktik Icon",
-    src: socialIcons.tiktok,
-  },
-  {
-    href: "https://www.twitch.com/nxvafps",
-    alt: "Twitch Icon",
-    src: socialIcons.twitch,
-  },
-  {
-    href: "https://www.discord.gg/tSNujPdzAu",
-    alt: "Discord Icon",
-    src: socialIcons.discord,
-  },
-  {
-    href: "https://steamcommunity.com/id/nxvaFPS/",
-    alt: "Steam Icon",
-    src: socialIcons.steam,
+    alt: "Bluesky Icon",
+    src: socialIcons.bluesky,
   },
 ];
 const Footer: React.FC = () => (
@@ -58,7 +36,7 @@ const Footer: React.FC = () => (
           target="_blank"
           rel="noreferrer"
         >
-          <Image alt={link.alt} src={link.src} />
+          <CircularIcon alt={link.alt} src={link.src} />
         </LinkStyled>
       ))}
     </FooterContainer>
@@ -66,3 +44,4 @@ const Footer: React.FC = () => (
 );
 
 export default Footer;
+// TODO: fix footer overlapping with techicons on home page.

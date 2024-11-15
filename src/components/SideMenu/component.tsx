@@ -4,7 +4,7 @@ import React from "react";
 import { sideMenuVariants } from "./animations";
 
 //Assets
-import { aboutIcon, contactIcon, homeIcon, portfolioIcon } from "../../assets";
+import { generalIcons } from "../../assets";
 //Components
 import { SidemenuItem } from "../MenuItem";
 
@@ -21,22 +21,22 @@ const Sidemenu: React.FC<{ onClose: () => void }> = ({ onClose }) => (
 
 const items = [
   {
-    icon: homeIcon,
+    icon: generalIcons.homeIcon,
     text: "Home",
     href: "/",
   },
   {
-    icon: aboutIcon,
+    icon: generalIcons.aboutIcon,
     text: "About",
     href: "/about",
   },
   {
-    icon: portfolioIcon,
+    icon: generalIcons.portfolioIcon,
     text: "Portfolio",
     href: "/portfolio",
   },
   {
-    icon: contactIcon,
+    icon: generalIcons.contactIcon,
     text: "Contact",
     href: "/contact",
   },

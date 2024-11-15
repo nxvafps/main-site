@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 
 import { http, HttpResponse, delay } from "msw";
 
-import { siteIcon } from "../../assets";
+import { generalIcons } from "../../assets";
 
 import ProjectDisplay from "./component";
 
@@ -24,7 +24,7 @@ const TestData = [
     project_code: "nv1",
     project_name: "Project1",
     project_details: "Project1 Details",
-    project_icon: siteIcon,
+    project_icon: generalIcons.siteIcon,
     project_status: "current",
     project_link: "#",
     project_page: "#",
@@ -35,7 +35,7 @@ const TestData = [
     project_code: "nv2",
     project_name: "Project2",
     project_details: "Project2 Details",
-    project_icon: siteIcon,
+    project_icon: generalIcons.siteIcon,
     project_status: "current",
     project_link: "#",
     project_page: "#",
@@ -46,7 +46,7 @@ const TestData = [
     project_code: "nv3",
     project_name: "Project3",
     project_details: "Project3 Details",
-    project_icon: siteIcon,
+    project_icon: generalIcons.siteIcon,
     project_status: "current",
     project_link: "#",
     project_page: "#",
@@ -57,7 +57,7 @@ const TestData = [
     project_code: "nv4",
     project_name: "Project4",
     project_details: "Project4 Details",
-    project_icon: siteIcon,
+    project_icon: generalIcons.siteIcon,
     project_status: "current",
     project_link: "#",
     project_page: "#",
@@ -66,6 +66,10 @@ const TestData = [
 ];
 
 export const MockedSuccess: Story = {
+  args: {
+    status: "success",
+    projects: TestData,
+  },
   parameters: {
     msw: {
       handlers: [
@@ -78,6 +82,10 @@ export const MockedSuccess: Story = {
 };
 
 export const MockedError: Story = {
+  args: {
+    status: "error",
+    projects: [],
+  },
   parameters: {
     msw: {
       handlers: [

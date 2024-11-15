@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { siteIcon } from "../../assets";
+import { generalIcons } from "../../assets";
 
 import ProjectItem from "./component";
 
@@ -19,7 +19,7 @@ export const defaultData = {
   project_code: "nvX",
   project_name: "Project Name",
   project_details: "Project Details",
-  project_icon: siteIcon,
+  project_icon: generalIcons.siteIcon,
   project_status: "project status",
   project_link: "#",
   project_page: "#",

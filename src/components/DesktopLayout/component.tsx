@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { Outlet } from "react-router-dom";
 
 //Assets
-import { siteIcon } from "../../assets";
+import { generalIcons } from "../../assets";
 
 //Components
 import { Footer, NavButton } from "../";
@@ -49,7 +49,7 @@ const NavMenu: React.FC = () => (
 
 const HeaderInfo: React.FC = () => (
   <>
-    <Icon src={siteIcon} alt="Site Icon" />
+    <Icon src={generalIcons.siteIcon} alt="Site Icon" />
     <Text>novaFPS</Text>
     <Divider />
   </>

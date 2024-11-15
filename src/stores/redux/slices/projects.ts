@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 import { fetchProjects } from "../asyncActions";
 
-import { siteIcon } from "../../../assets";
+import { generalIcons } from "../../../assets";
 
 import type { Project } from "../asyncActions";
 
@@ -12,7 +12,7 @@ const defaultProjects = [
     project_code: "nv1",
     project_name: "project1",
     project_details: "details1",
-    project_icon: siteIcon,
+    project_icon: generalIcons.siteIcon,
     project_status: "current",
     project_repo: "#",
     project_url: "#",
@@ -23,7 +23,7 @@ const defaultProjects = [
     project_code: "nv2",
     project_name: "project2",
     project_details: "details2",
-    project_icon: siteIcon,
+    project_icon: generalIcons.siteIcon,
     project_status: "current",
     project_repo: "#",
     project_url: "#",
@@ -34,7 +34,7 @@ const defaultProjects = [
     project_code: "nv3",
     project_name: "project3",
     project_details: "details3",
-    project_icon: siteIcon,
+    project_icon: generalIcons.siteIcon,
     project_status: "current",
     project_repo: "#",
     project_url: "#",
@@ -45,7 +45,7 @@ const defaultProjects = [
     project_code: "nv4",
     project_name: "project4",
     project_details: "details4",
-    project_icon: siteIcon,
+    project_icon: generalIcons.siteIcon,
     project_status: "current",
     project_repo: "#",
     project_url: "#",

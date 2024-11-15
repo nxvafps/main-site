@@ -1,12 +1,15 @@
 import { ProjectItem } from "../ProjectItem";
 
-import { useFetchProjects } from "./hooks";
-
 import { StyledProjectList } from "./styles";
 
-const ProjectList: React.FC = () => {
-  const { status, projects } = useFetchProjects();
+import type { Project } from "../../stores/redux/asyncActions";
 
+interface ProjectListProps {
+  status: string;
+  projects: Project[];
+}
+
+const ProjectList: React.FC<ProjectListProps> = ({ status, projects }) => {
   const LoadingRow = <div>Loading</div>;
 
   if (status === "loading") {

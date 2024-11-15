@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { siteIcon } from "../../assets";
+import { generalIcons } from "../../assets";
 
 import CircularIcon from "./component";
 
@@ -18,7 +18,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    src: siteIcon,
+    src: generalIcons.siteIcon,
     alt: "site icon",
   },
 };
