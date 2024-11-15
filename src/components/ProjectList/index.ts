@@ -1,3 +1,3 @@
-import ProjectDisplay from "./component";
+import ProjectList from "./component";
 
-export { ProjectDisplay };
+export { ProjectList };

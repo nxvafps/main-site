@@ -2,9 +2,9 @@ import { ProjectItem } from "../ProjectItem";
 
 import { useFetchProjects } from "./hooks";
 
-import { ProjectList } from "./styles";
+import { StyledProjectList } from "./styles";
 
-const ProjectDisplay: React.FC = () => {
+const ProjectList: React.FC = () => {
   const { status, projects } = useFetchProjects();
 
   const LoadingRow = <div>Loading</div>;
@@ -25,7 +25,7 @@ const ProjectDisplay: React.FC = () => {
   }
 
   return (
-    <ProjectList>
+    <StyledProjectList>
       {projects.map((project) => (
         <ProjectItem
           key={project.id}
@@ -39,10 +39,10 @@ const ProjectDisplay: React.FC = () => {
           project_page={project.project_page}
         />
       ))}
-    </ProjectList>
+    </StyledProjectList>
   );
 };
 
-export default ProjectDisplay;
+export default ProjectList;
 // TODO: ADD MORE STORIES FOR THIS COMPONENT
 // TODO: UPDATE THE FORMAT OF THE LOADING STATE

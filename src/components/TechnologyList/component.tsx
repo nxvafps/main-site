@@ -1,21 +1,7 @@
 import React, { useState } from "react";
 import { LayoutGroup } from "framer-motion";
 
-import {
-  bootstrap,
-  css,
-  express,
-  git,
-  html,
-  node,
-  react,
-  sass,
-  tailwind,
-  javascript,
-  postgresql,
-  redux,
-  copilot,
-} from "../../assets";
+import { techIcons } from "../../assets";
 
 import {
   IconList,
@@ -30,74 +16,70 @@ import { IconObj } from "../../types";
 
 import { CircularIcon, CloseIcon } from "../";
 
-export interface IconListProps {
-  $isSelected: boolean;
-}
-
-const techIcons: IconObj[] = [
+const techIconInfo: IconObj[] = [
   {
     name: "HTML",
-    src: html,
+    src: techIcons.html,
     description: "Here I talk about what I know about HTML.",
   },
   {
     name: "CSS",
-    src: css,
+    src: techIcons.css,
     description: "Here I talk about what I know about CSS.",
   },
   {
     name: "SASS",
-    src: sass,
+    src: techIcons.sass,
     description: "Here I talk about what I know about SASS.",
   },
   {
     name: "Bootstrap",
-    src: bootstrap,
+    src: techIcons.bootstrap,
     description: "Here I talk about what I know about Bootstrap.",
   },
   {
     name: "Tailwind",
-    src: tailwind,
+    src: techIcons.tailwind,
     description: "Here I talk about what I know about Tailwind.",
   },
   {
     name: "Javascript",
-    src: javascript,
+    src: techIcons.javascript,
     description: "Here I talk about what I know about Javascript.",
   },
   {
     name: "Node.js",
-    src: node,
+    src: techIcons.node,
     description: "Here I talk about what I know about Node.js.",
   },
   {
     name: "React.js",
-    src: react,
+    src: techIcons.react,
     description: "Here I talk about what I know about React.js.",
   },
   {
     name: "Redux",
-    src: redux,
+    src: techIcons.redux,
     description: "Here I talk about what I know about Redux.",
   },
   {
     name: "Express.js",
-    src: express,
+    src: techIcons.express,
     description: "Here I talk about what I know about Express.js.",
   },
   {
     name: "PostgreSQL",
-    src: postgresql,
+    src: techIcons.postgresql,
     description: "Here I talk about what I know about PostgreSQL.",
   },
   {
     name: "Git",
-    src: git,
+    src: techIcons.git,
     description: "Here I talk about what I know about Git.",
   },
   {
     name: "Copilot",
-    src: copilot,
+    src: techIcons.copilot,
     description: "Here I talk about what I know about Copilot.",
   },
 ];
@@ -129,7 +111,7 @@ const TechnologyList = () => {
           transition={{ duration: 0.5 }}
         >
           <LayoutGroup>
-            {techIcons.map((icon, index) => (
+            {techIconInfo.map((icon, index) => (
               <CircularIcon
                 key={index}
                 src={icon.src}

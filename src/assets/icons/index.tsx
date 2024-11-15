@@ -1,2 +1,2 @@
-export * from "./socials";
-export * from "./general";
+export * as socialIcons from "./socials";
+export * as generalIcons from "./general";

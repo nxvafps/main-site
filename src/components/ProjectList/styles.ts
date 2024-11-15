@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ProjectList = styled.div`
+export const StyledProjectList = styled.div`
   width: 80%;
   margin: auto;
   display: grid;

@@ -8,7 +8,7 @@ import { CloseIcon } from "./CloseIcon";
 import { SidemenuItem } from "./MenuItem";
 import { Sidemenu } from "./SideMenu";
 import { Hamburger } from "./Hamburger";
-import { ProjectDisplay } from "./ProjectList";
+import { ProjectList } from "./ProjectList";
 import { TechnologyList } from "./TechnologyList";
 import { CircularIcon } from "./CircularIcon";
 
@@ -24,6 +24,6 @@ export {
   SidemenuItem,
   Hamburger,
   CircularIcon,
-  ProjectDisplay,
+  ProjectList,
   TechnologyList,
 };

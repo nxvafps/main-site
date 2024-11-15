@@ -1,16 +1,7 @@
 import React from "react";
 
 //Assets
-import {
-  discord,
-  github,
-  linkedin,
-  steam,
-  tiktok,
-  twitch,
-  twitter,
-  youtube,
-} from "../../assets";
+import { socialIcons } from "../../assets";
 
 //Styles
 import { FooterContainer, Image, LinkStyled } from "./styles";
@@ -19,42 +10,42 @@ const socialLinks = [
   {
     href: "https://www.linkedin.com/in/oliver-quirk-1350b416b/",
     alt: "Linkedin Icon",
-    src: linkedin,
+    src: socialIcons.linkedin,
   },
   {
     href: "https://github.com/nxvafps",
     alt: "Github Icon",
-    src: github,
+    src: socialIcons.github,
   },
   {
     href: "https://www.youtube.com/@nxvafps",
     alt: "Youtube Icon",
-    src: youtube,
+    src: socialIcons.youtube,
   },
   {
     href: "https://www.x.com/nxvafps",
     alt: "Twitter Icon",
-    src: twitter,
+    src: socialIcons.twitter,
   },
   {
     href: "https://www.tiktok.com/@nxvafps",
     alt: "Tiktik Icon",
-    src: tiktok,
+    src: socialIcons.tiktok,
   },
   {
     href: "https://www.twitch.com/nxvafps",
     alt: "Twitch Icon",
-    src: twitch,
+    src: socialIcons.twitch,
   },
   {
     href: "https://www.discord.gg/tSNujPdzAu",
     alt: "Discord Icon",
-    src: discord,
+    src: socialIcons.discord,
   },
   {
     href: "https://steamcommunity.com/id/nxvaFPS/",
     alt: "Steam Icon",
-    src: steam,
+    src: socialIcons.steam,
   },
 ];
 const Footer: React.FC = () => (

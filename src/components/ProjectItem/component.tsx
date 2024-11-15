@@ -12,16 +12,7 @@ import {
   Link,
 } from "./style";
 
-export interface ProjectItemProps {
-  project_code: string;
-  project_name: string;
-  project_details: string;
-  project_icon: string;
-  project_status: string;
-  project_link?: string;
-  project_page?: string;
-  project_repo?: string;
-}
+import { ProjectItemProps } from "../../types";
 
 const ProjectItem = ({
   project_code,

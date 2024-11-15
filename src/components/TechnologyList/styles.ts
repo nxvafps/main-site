@@ -1,11 +1,9 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-export interface IconsProps {
-  $isSelected: boolean;
-}
+import { IconListProps } from "../../types";
 
-export const Icons = styled(motion.div)<IconsProps>`
+export const Icons = styled(motion.div)<IconListProps>`
   grid-area: icons;
   display: grid;
   justify-content: center;

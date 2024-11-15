@@ -1,12 +1,12 @@
 import React from "react";
 
-import { Title, ProjectDisplay } from "../../../components";
+import { Title, ProjectList } from "../../../components";
 
 const PortfolioHome: React.FC = () => {
   return (
     <>
       <Title text="Portfolio" />
-      <ProjectDisplay />
+      <ProjectList />
     </>
   );
 };
