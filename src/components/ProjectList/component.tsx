@@ -1,34 +1,8 @@
-import React, { useState, useEffect } from "react";
-
 import { ProjectItem } from "../ProjectItem";
 
-//import { useSelector } from "react-redux";
-
-//import type { RootState } from "../../stores";
-
-import type { Project } from "../../stores/redux/asyncActions";
+import { useFetchProjects } from "./hooks";
 
 import { ProjectList } from "./styles";
-import axios from "axios";
-
-const useFetchProjects = () => {
-  const [status, setStatus] = useState<string>("idle");
-  const [projects, setProjects] = useState<Project[]>([]);
-  useEffect(() => {
-    setStatus("loading");
-    axios
-      .get("https://api.novafps.com/projects/all")
-      .then((response) => {
-        setStatus("success");
-        setProjects(response.data);
-      })
-      .catch(() => {
-        setStatus("error");
-      });
-  }, []);
-
-  return { status, projects };
-};
 
 const ProjectDisplay: React.FC = () => {
   const { status, projects } = useFetchProjects();
