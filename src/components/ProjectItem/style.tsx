@@ -97,10 +97,10 @@ export const StyledProjectItem = styled(motion.div)`
   position: relative;
   border: 1px solid transparent;
   transform-origin: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
   &:hover {
     border: 1px solid #ff4c29;
     box-shadow: 0 0 10px #ff4c29, 0 0 20px #ff4c29, 0 0 30px #ff4c29;
   }
-  //TODO: add animations for hover border appearing from the top left and expanding around the card
 `;

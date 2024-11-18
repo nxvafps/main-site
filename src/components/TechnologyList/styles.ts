@@ -61,8 +61,6 @@ export const IconList = styled(motion.div)`
   grid-template-areas: "icons details";
   gap: 40px;
   margin: 20px;
-  min-height: 80vh;
-  max-height: 80vh;
   width: 90vw;
   max-width: 1000px;
 `;

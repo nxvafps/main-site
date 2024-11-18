@@ -275,3 +275,9 @@ export const TechnologyListWrapper = styled.div`
   align-items: center;
   justify-content: center;
 `;
+
+export const ProjectWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;

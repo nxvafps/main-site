@@ -4,7 +4,14 @@ import { useNavigate } from "react-router-dom";
 import { me } from "../../../assets";
 
 //Components
-import { Title, Typewriter, TechnologyList } from "../../../components";
+import {
+  Title,
+  Typewriter,
+  TechnologyList,
+  ProjectList,
+} from "../../../components";
+
+import { useFetchCurrentProjects } from "./hooks";
 
 //Styles
 import {
@@ -17,10 +24,13 @@ import {
   Image,
   SkillShowcase,
   TechnologyListWrapper,
+  ProjectWrapper,
 } from "./styles";
 
 const Home: React.FC = () => {
   const navigate = useNavigate();
+
+  const { status, projects } = useFetchCurrentProjects();
 
   const typeWriterDynamicText = [
     "Problem Solver",
@@ -60,6 +70,10 @@ const Home: React.FC = () => {
         <TechnologyListWrapper>
           <TechnologyList />
         </TechnologyListWrapper>
+        <Title text="Current Projects" type="h2" underline />
+        <ProjectWrapper>
+          <ProjectList status={status} projects={projects} />
+        </ProjectWrapper>
       </SkillShowcase>
     </>
   );
