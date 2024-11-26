@@ -13,10 +13,9 @@ export const FooterContainer = styled.footer`
 export const LinkStyled = styled.a`
   display: flex;
   justify-content: center;
-  width: var(--image-size);
-  height: var(--image-size);
-  max-width: 150px;
-  max-height: 150px;
+  width: calc((80vw - 60px) / 3);
+  max-width: 100px;
+  max-height: 100px;
   &:hover {
     background-color: none;
   }
