@@ -9,6 +9,7 @@ import {
   Typewriter,
   TechnologyList,
   ProjectList,
+  CircularIcon,
 } from "../../../components";
 
 import { useFetchCurrentProjects } from "./hooks";
@@ -21,7 +22,6 @@ import {
   Placeholder,
   IntroText2,
   IntroRight,
-  Image,
   SkillShowcase,
   TechnologyListWrapper,
   ProjectWrapper,
@@ -62,7 +62,11 @@ const Home: React.FC = () => {
           </IntroText2>
         </IntroLeft>
         <IntroRight>
-          <Image src={me} onClick={() => navigate("/about")}></Image>
+          <CircularIcon
+            alt="image of me"
+            src={me}
+            onClick={() => navigate("/about")}
+          />
         </IntroRight>
       </Intro>
       <SkillShowcase>
@@ -80,4 +84,3 @@ const Home: React.FC = () => {
 };
 
 export default Home;
-//TODO: add api endpoint for current projects and add a showcase for them.

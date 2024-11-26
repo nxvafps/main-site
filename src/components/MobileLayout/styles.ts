@@ -14,6 +14,8 @@ export const Header = styled.div`
   align-items: center;
   justify-content: space-between;
   top: 0;
+  position: fixed;
+  width: 100%;
 `;
 
 export const HeaderLeft = styled.div`
@@ -47,25 +49,26 @@ export const Nav = styled(motion.nav)<OverlayProps>`
 `;
 
 export const NavBackground = styled(motion.div)<OverlayProps>`
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   width: 300px;
   background: linear-gradient(135deg, #121212, #323232);
   pointer-events: ${({ $isOpen }) => ($isOpen ? "auto" : "none")};
+  z-index: 1000;
 `;
 
 export const MainContent = styled.div``;
 
 export const Overlay = styled.div<OverlayProps>`
   position: fixed;
-  top: 80px;
+  top: 0;
   left: 0;
   width: 100%;
-  height: calc(100% - 80px);
+  height: 100%;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 999;
+  z-index: 500;
   opacity: ${({ $isOpen }) => ($isOpen ? 1 : 0)};
   visibility: ${({ $isOpen }) => ($isOpen ? "visible" : "hidden")};
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;

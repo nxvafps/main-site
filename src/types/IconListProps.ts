@@ -1,3 +1,4 @@
 export interface IconListProps {
-  $isSelected: boolean;
+  $isSelected?: boolean;
+  layoutType?: string;
 }

@@ -1,16 +1,11 @@
-import React, { useState } from "react";
-import { LayoutGroup } from "framer-motion";
+import { useState } from "react";
+import { AnimatePresence } from "framer-motion";
+
+import * as animations from "./animations";
 
 import { techIcons } from "../../assets";
 
-import {
-  IconList,
-  Icons,
-  Details,
-  DetailsTitle,
-  DetailsDescription,
-  CloseButton,
-} from "./styles";
+import * as styles from "./styles";
 
 import { IconObj } from "../../types";
 
@@ -99,44 +94,37 @@ const TechnologyList = () => {
 
   return (
     <>
-      <IconList
-        initial={{ gridTemplateColumns: "1fr 0" }}
-        animate={{ gridTemplateColumns: selectedIcon ? "1fr 1fr" : "1fr 0fr" }}
-        transition={{ duration: 0.5 }}
-        layout
-      >
-        <Icons
-          $isSelected={!!selectedIcon}
-          layout
-          transition={{ duration: 0.5 }}
-        >
-          <LayoutGroup>
-            {techIconInfo.map((icon, index) => (
-              <CircularIcon
-                key={index}
-                src={icon.src}
-                alt={icon.name}
-                onClick={() => handleIconClick(icon)}
-              />
-            ))}
-          </LayoutGroup>
-        </Icons>
-
-        <Details
-          initial={{ padding: 0 }}
-          animate={{
-            padding: selectedIcon ? 20 : 0,
-          }}
-          transition={{ duration: 0.5 }}
-          layout
-        >
-          <CloseButton>
-            <CloseIcon />
-          </CloseButton>
-          <DetailsTitle>{selectedIcon?.name}</DetailsTitle>
-          <DetailsDescription>{selectedIcon?.description}</DetailsDescription>
-        </Details>
-      </IconList>
+      <styles.IconList layout>
+        <styles.Icons layout>
+          {techIconInfo.map((icon, index) => (
+            <CircularIcon
+              key={index}
+              src={icon.src}
+              alt={icon.name}
+              onClick={() => handleIconClick(icon)}
+            />
+          ))}
+        </styles.Icons>
+        <AnimatePresence>
+          {!!selectedIcon && (
+            <styles.Details
+              initial="closed"
+              animate="open"
+              exit="closed"
+              variants={animations.modalVariants}
+              layout
+            >
+              <styles.CloseButton onClick={handleCloseClick}>
+                <CloseIcon />
+              </styles.CloseButton>
+              <styles.DetailsTitle>{selectedIcon?.name}</styles.DetailsTitle>
+              <styles.DetailsDescription>
+                {selectedIcon?.description}
+              </styles.DetailsDescription>
+            </styles.Details>
+          )}
+        </AnimatePresence>
+      </styles.IconList>
     </>
   );
 };
