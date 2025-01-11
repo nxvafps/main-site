@@ -72,11 +72,6 @@ const techIconInfo: IconObj[] = [
     src: techIcons.git,
     description: "Here I talk about what I know about Git.",
   },
-  {
-    name: "Copilot",
-    src: techIcons.copilot,
-    description: "Here I talk about what I know about Copilot.",
-  },
 ];
 
 const TechnologyList = () => {
