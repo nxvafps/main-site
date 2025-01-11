@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/static/js/main.4ce8fa11.js",
+    "main.js": "/static/js/main.15c8436c.js",
     "static/media/me.png": "/static/media/me.49476f9d4e7d7c046120.png",
     "static/media/linkedin.svg": "/static/media/linkedin.0b88e0adbc45d80237380e0bf1b2a1de.svg",
     "static/media/banner.png": "/static/media/banner.49af4b7b1a0c3d6f1522.png",
@@ -10,7 +10,7 @@
     "static/media/siteIcon.png": "/static/media/siteIcon.e526ec628e64d179dcf0.png",
     "static/media/sass.svg": "/static/media/sass.d0912a65175113b367a789d515668ac1.svg",
     "static/media/react.svg": "/static/media/react.4f7d8c1df65258451ae0ea94b5adeaaf.svg",
-    "static/media/github.svg": "/static/media/github.3010c88b4f2901efa21ff0a2e0bf4795.svg",
+    "static/media/github.svg": "/static/media/github.9979559d2b03661ecc4375049d238b51.svg",
     "static/media/copilot.svg": "/static/media/copilot.78244c98b56950c15cd72b14ebde84a7.svg",
     "static/media/nodejs-icon.svg": "/static/media/nodejs-icon.d43969923c75f6e371ab56c2df7a0646.svg",
     "static/media/redux.svg": "/static/media/redux.3a166310a81e486bc09674072eee65bb.svg",
@@ -25,15 +25,16 @@
     "static/media/tailwindcss-icon.svg": "/static/media/tailwindcss-icon.16306e2215745958e6f24595cc13c125.svg",
     "static/media/discord.svg": "/static/media/discord.135b3876c3f25b1bbbff9daac1390595.svg",
     "static/media/twitter.svg": "/static/media/twitter.f986d49d4a8dbcd67ee3145a3e6c7ab8.svg",
+    "static/media/bluesky.svg": "/static/media/bluesky.53ae131a1e2167b0d44e28ae7e06a344.svg",
     "static/media/contactIcon.svg": "/static/media/contactIcon.5be106bfb3806c7e84aabda9b66b9c1d.svg",
     "static/media/youtube.svg": "/static/media/youtube.f89192eb3f7f30de4ce57de4c78ae088.svg",
     "static/media/steam.svg": "/static/media/steam.f2f465eb7afbefbc89f148077a2d9732.svg",
     "index.html": "/index.html",
     "static/media/twitch.svg": "/static/media/twitch.37d3267faf28ce06b3dff40fbb66b60c.svg",
     "static/media/tiktok.svg": "/static/media/tiktok.32d903da2c37c10311ef1c69be316618.svg",
-    "main.4ce8fa11.js.map": "/static/js/main.4ce8fa11.js.map"
+    "main.15c8436c.js.map": "/static/js/main.15c8436c.js.map"
   },
   "entrypoints": [
-    "static/js/main.4ce8fa11.js"
+    "static/js/main.15c8436c.js"
   ]
 }
