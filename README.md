@@ -106,4 +106,8 @@ Added ProjectList Component and its respective stories.
 
 Updated API to serve over https instead of http.
 
+### Version 1.4.2 <!-- omit in toc -->
+
+Updated styling on mobile view.
+
 </div>
