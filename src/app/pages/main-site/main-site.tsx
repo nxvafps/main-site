@@ -1,9 +1,13 @@
 import React from "react";
 import { Title } from "../../../components";
 
+import * as styles from "./styles";
+
 const MainSite: React.FC = () => (
   <>
-    <Title text="Main Site" />
+    <styles.titleWrapper>
+      <Title text="Main Site" />
+    </styles.titleWrapper>
   </>
 );
 

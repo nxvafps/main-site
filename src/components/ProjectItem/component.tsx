@@ -10,6 +10,7 @@ import {
   ProjectDetails,
   LinkContainer,
   Link,
+  InternalLink,
 } from "./style";
 
 import { ProjectItemProps } from "../../types";
@@ -61,13 +62,9 @@ const ProjectItem = ({
               </Link>
             )}
             {project_page && (
-              <Link
-                href={project_page}
-                target="_blank"
-                onClick={handleLinkClick}
-              >
+              <InternalLink to={project_page} onClick={handleLinkClick}>
                 View Page
-              </Link>
+              </InternalLink>
             )}
             {project_repo && (
               <Link

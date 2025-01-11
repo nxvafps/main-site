@@ -1,8 +1,12 @@
 import { Title } from "../../../components";
 
+import * as styles from "./styles";
+
 const Contact: React.FC = () => (
   <>
-    <Title text="Contact" />
+    <styles.titleWrapper>
+      <Title text="Contact" />
+    </styles.titleWrapper>
   </>
 );
 

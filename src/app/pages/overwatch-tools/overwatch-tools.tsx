@@ -1,9 +1,13 @@
 import React from "react";
 import { Title } from "../../../components";
 
+import * as styles from "./styles";
+
 const OverwatchTools: React.FC = () => (
   <>
-    <Title text="Overwatch Tools" />
+    <styles.titleWrapper>
+      <Title text="Overwatch Tools" />
+    </styles.titleWrapper>
   </>
 );
 

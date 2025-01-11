@@ -12,7 +12,9 @@ const PortfolioHome: React.FC = () => {
 
   return (
     <>
-      <Title text="Portfolio" />
+      <styles.titleWrapper>
+        <Title text="Portfolio" />
+      </styles.titleWrapper>
       <styles.projectListWrapper>
         <ProjectList status={status} projects={projects} />
       </styles.projectListWrapper>

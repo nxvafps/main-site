@@ -1,9 +1,13 @@
 import React from "react";
 import { Title } from "../../../components";
 
+import * as styles from "./styles";
+
 const LinuxVps: React.FC = () => (
   <>
-    <Title text="Linux VPS" />
+    <styles.titleWrapper>
+      <Title text="Linux VPS" />
+    </styles.titleWrapper>
   </>
 );
 

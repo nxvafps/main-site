@@ -65,6 +65,7 @@ const Home: React.FC = () => {
           <CircularIcon
             alt="image of me"
             src={me}
+            maxSize={200}
             onClick={() => navigate("/about")}
           />
         </IntroRight>

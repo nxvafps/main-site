@@ -16,7 +16,7 @@ export const Intro = styled.div`
     //mobile display
     grid-template-columns: 1fr;
     justify-items: center;
-    margin: 5px auto 10px;
+    margin: 80px auto 10px;
   }
 `;
 
@@ -93,18 +93,7 @@ export const IntroRight = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  max-width: 600px;
-
-  @media (min-width: 768px) {
-    //desktop display
-    max-width: 40vw;
-  }
-
-  @media (max-width: 768px) {
-    //mobile display
-    max-width: 40vw;
-  }
+  max-width: 25vw;
 `;
 
 export const SkillShowcase = styled.div`

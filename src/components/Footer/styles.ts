@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const FooterContainer = styled.footer`
-  margin: 40px auto 20px auto;
+  margin: 40px auto 40px auto;
   display: flex;
   justify-content: center;
   align-items: center;

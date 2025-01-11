@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { Link as RouterLink } from "react-router-dom";
 
 export const ProjectIcon = styled.img`
   grid-column: 1;
@@ -73,6 +74,19 @@ export const LinkContainer = styled.div`
 `;
 
 export const Link = styled.a`
+  text-decoration: none;
+  padding: 10px;
+  background-color: #333333;
+  color: #ffffff;
+  width: 100%;
+  text-align: center;
+  &:hover {
+    background-color: #ffffff;
+    color: #333333;
+  }
+`;
+
+export const InternalLink = styled(RouterLink)`
   text-decoration: none;
   padding: 10px;
   background-color: #333333;

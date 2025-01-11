@@ -5,10 +5,11 @@ import { Icon } from "./styles";
 export interface CircularIconProps {
   src: string;
   alt: string;
+  maxSize?: number;
   onClick?: () => void;
 }
 
-const CircularIcon = ({ src, alt, ...props }: CircularIconProps) => {
+const CircularIcon = ({ src, alt, maxSize, ...props }: CircularIconProps) => {
   return (
     <Icon
       layout="position"
