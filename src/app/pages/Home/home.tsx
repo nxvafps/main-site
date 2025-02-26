@@ -36,9 +36,7 @@ const Home: React.FC = () => {
     "Problem Solver",
     "Web Developer",
     "Software Developer",
-    "Youtuber",
     "Designer",
-    "Streamer",
   ];
 
   return (
@@ -55,10 +53,8 @@ const Home: React.FC = () => {
           <IntroText2>
             Here you'll find my web development portfolio showcasing the
             projects I have completed, along with the ones I'm currently working
-            on! But that's not all! I am also using this space to celebrate my
-            love of gaming. Explore my content from youtube, twitter, and tiktok
-            and join me on my adventures! Stay a while, explore, and let’s
-            create something amazing together!
+            on! Stay a while, explore, and let’s create something amazing
+            together!
           </IntroText2>
         </IntroLeft>
         <IntroRight>
